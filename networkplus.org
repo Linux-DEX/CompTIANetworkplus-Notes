@@ -1,0 +1,1005 @@
+#+TITLE: CompTIA Network+
+#+DESCRIPTION: Networking tutorial
+#+AUTHOR: Linux-DEX
+#+OPTIONS: toc:3
+#+CAPTION: My Image
+
+* TABLE OF CONTENT :toc:
+- [[#network-fundamentals][Network Fundamentals]]
+  - [[#network][Network:]]
+  - [[#computer-network][Computer Network:]]
+  - [[#components-of-a-network][Components Of A Network]]
+  - [[#node][Node]]
+  - [[#server][Server]]
+  - [[#the-network-backbone][The Network Backbone]]
+  - [[#terminal][Terminal]]
+  - [[#client][Client]]
+  - [[#peer][Peer]]
+- [[#categories-of-networks][Categories of Networks]]
+  - [[#lan---local-area-network][LAN - Local Area Network]]
+  - [[#wan---wide-area-network][WAN - Wide Area Network]]
+  - [[#internet][Internet]]
+  - [[#intranet][Intranet]]
+  - [[#extranet][Extranet]]
+  - [[#segment][Segment]]
+  - [[#network-model][Network Model]]
+- [[#network-topologies][Network Topologies]]
+  - [[#topology][Topology]]
+  - [[#network-connections][Network Connections]]
+  - [[#physical-bus-topology][Physical Bus Topology]]
+  - [[#physical-star-topology][Physical Star Topology]]
+  - [[#physical-ring-topology][Physical Ring Topology]]
+  - [[#physical-tree-topology][Physical Tree Topology]]
+  - [[#physical-mesh-topology][Physical Mesh Topology]]
+  - [[#hybrid-topology][Hybrid Topology]]
+  - [[#logical-bus-ring-and-star-topologies][Logical Bus, Ring, and Star Topologies]]
+- [[#network-hardware--media][Network Hardware & Media]]
+  - [[#network-media][Network Media]]
+  - [[#bounded-network-media][Bounded Network Media]]
+  - [[#copper-media][Copper Media]]
+  - [[#twisted-pair-cable][Twisted Pair Cable]]
+  - [[#stp-and-utp-cable][STP and UTP Cable:]]
+  - [[#twisted-pair-cabling-categories][Twisted Pair Cabling Categories]]
+  - [[#coaxial-cabling][Coaxial Cabling]]
+  - [[#coax-cable-types][Coax Cable Types]]
+  - [[#coax-connector-types][Coax Connector Types]]
+  - [[#fiber-optic-cabling][Fiber Optic Cabling]]
+  - [[#fiber-modes][Fiber Modes]]
+  - [[#fiber-connector-types][Fiber Connector Types]]
+  - [[#media-converters][Media Converters]]
+  - [[#structure-cabling-standards][Structure Cabling Standards]]
+  - [[#568abc-standards][568/A/B/C Standards]]
+  - [[#premise-wiring][Premise Wiring]]
+  - [[#plenum-vs-pvc][Plenum Vs PVC]]
+- [[#straight-through-crossover-and-rollover-cables][Straight-through, crossover, and Rollover cables]]
+  - [[#modular-connector][Modular Connector]]
+  - [[#8-position-8-contact8p8c-connector][8 Position 8 Contact(8P8C) connector]]
+  - [[#t568a--t568b-wiring-schemes][T568A & T568B wiring schemes]]
+  - [[#horizontal-cabling][Horizontal Cabling]]
+  - [[#mdi][MDI]]
+  - [[#mdi-x][MDI-X]]
+  - [[#straight-through-cable][Straight-through cable]]
+  - [[#ethernet-network----10base-t-and-100base-tx][Ethernet Network -- 10Base-T and 100Base-TX]]
+  - [[#crossover-cable][Crossover Cable]]
+  - [[#crossover-cable---termination][Crossover cable - Termination]]
+  - [[#auto-mdi-x][Auto-MDI-X]]
+  - [[#rollover-cable][Rollover Cable]]
+- [[#more-cables-connectors--transceivers][More Cables, Connectors & Transceivers]]
+  - [[#db-connectors][DB Connectors]]
+  - [[#f-connectorf-type-connector][F Connector/F type connector]]
+  - [[#punch-down-blocks][Punch-down Blocks]]
+  - [[#fiber-distribution-panel][Fiber Distribution Panel]]
+  - [[#transceivers][Transceivers]]
+  - [[#network-storage---fiber-channel-over-ethernet][Network Storage - Fiber channel Over Ethernet]]
+  - [[#infinibandib][InfiniBand(IB)]]
+- [[#network-hardware---unbounded][Network Hardware - UnBounded]]
+  - [[#unbounded-network-media][Unbounded Network Media]]
+  - [[#radio-networking][Radio Networking]]
+  - [[#spread-spectrum][Spread Spectrum]]
+  - [[#infrared-transmission][Infrared Transmission]]
+  - [[#bluetooth-transmission][Bluetooth Transmission]]
+  - [[#microwave-transmission][Microwave Transmission]]
+  - [[#wireless-access-point][Wireless Access Point]]
+  - [[#service-set-identifier][Service Set Identifier]]
+  - [[#installing-your-wap][Installing your WAP]]
+- [[#network-connectivity-devices][Network Connectivity Devices]]
+  - [[#network-interface-card][Network Interface Card]]
+  - [[#transceiver][Transceiver]]
+  - [[#switch][Switch]]
+  - [[#router][Router]]
+  - [[#gateway][Gateway]]
+  - [[#virtualization][Virtualization]]
+  - [[#naas-network-as-a-service][NaaS (Network-as-a-service)]]
+  - [[#iaasinfrastructure-as-a-service][IaaS(Infrastructure-as-a-service)]]
+  - [[#saassoftware-as-a-service][SaaS(Software-as-a-Service)]]
+  - [[#paasplatform-as-a-service][PaaS(Platform-as-a-Service)]]
+  - [[#legacy-connectivity-devices][Legacy Connectivity Devices]]
+  - [[#noise][Noise]]
+  - [[#differential-signaling][Differential Signaling]]
+  - [[#other-considerations-for-noise][Other Considerations for Noise]]
+- [[#advanced-networking-devices][Advanced Networking Devices]]
+  - [[#networks-1990s][Networks 1990's]]
+  - [[#network-201xs][Network 201x's]]
+  - [[#multilayer-switch][Multilayer Switch]]
+  - [[#wireless-controller][Wireless Controller]]
+  - [[#load-balancer][Load Balancer]]
+  - [[#intrusion-detection-systemids-intrusion-prevention-systemips][Intrusion Detection System(IDS) Intrusion Prevention System(IPS)]]
+  - [[#aaa-radius-server][AAA/ RADIUS Server]]
+  - [[#unified-threat-managementutm-appliance][Unified Threat Management(UTM) appliance]]
+  - [[#next-gen-firewallngfw][Next Gen Firewall(NGFW)]]
+  - [[#voip-pbx][VoIP PBX]]
+  - [[#content-filter][Content Filter]]
+
+* Network Fundamentals
+** Network:
+An interconnected or interrelated chain, group, or system.
+
+** Computer Network:
+Two or more computers that are connected with one another for the purpose of /communicating/ data electronically.
+
+** Components Of A Network
++ *Devices* : this are the actual computer for example: computer, printer, router, switches etc...
++ *Media* : Media can be physical connection such as copper, fiber optics, Or it can be wireless for example wifi.
++ *Adapter* : Every device communicate differently with each other, to allow this device to communicate with each other we use network adapter. It serve as translater between the commponent or device over the media which the data is send.
++ *Network operating system* : To manage and govern it need a OS, it tell the network how to work together as efficiently as possible over the  media, over the adapter, without the OS there will not be any order and direction in the network.
+
+** Node
++ Any device that is connected to a communications network.
++ This also called as *end point nodes*, because that where the data end.
++ *Router, switch, hub* are called as =Redistribution= nodes.
+
+** Server
++ It is a network device which is responsible for sharing resource and managing the certain services. like address(ip address).
++ Manages devices on the network and controls network wide functions like =permissions=.
++ A piece of computer hardware or software that provides functionality for other programs or devices, called *clients*.
+
+** The Network Backbone
+
+[[./img/networkbackbone.png]]
+
++ The network backbone is responsible for carrying the *Majority of Network traffic*.
++ It work on very high speed.
++ It basically connect all the smaller network together.
+
+*** Types of Network Backbones:
+
++ *Serial* : One backbone cable, multiple switches connected.
++ *Hierarchical/Distributed* : Easy management, typical for LAN, easily scalable.
++ *Collapsed* : Uses a Router as the connecting point.
++ *Parallel* : Like collapsed, but uses multiple cable connections. Great for redundancy.
+
+** Terminal 
++ Terminal is network hardware device that is used to entering the data into it and displaying the data from computer computing system.
++ It is called dummy computer because it does not have any processing capability of its own. this does not have any memory.
++ It need terminal emulator to emulate what id going on the server.
+
+** Client
++ A computer hardware or software device that requests access to service provided by a server as part of the client-server model of computer networks.
++ It has it own processer, and memory.
+
+** Peer
++ Provides Its own Resources and services.
++ It is Self managed and self contained.
++ It can act as both server & client.
+  
+* Categories of Networks
+
+** LAN - Local Area Network
++ Spans the geographical area of a small building, or a floor of a larger building.
++ Most commonly implemented technology is Ethernet, however it is not limited to only Ethernet technologies.
++ The Nodes in a LAN are directly connected to one another by cable or short range wireless.
++ LAN operates at a relatively higher speed compared to other WAN systems.
+
+[[./img/lan.png]]
+
+*** LAN Administrator Duties:
+A network administrator is responsible for keeping an organization's computer network up-to-date and operating as intended.
+
++ Broad range of versatile skills needed.
++ Responsible for maintaining and managing the local network.
++ Hardware, software, deployment, upgrades, installation and troubleshooting of network components.
++ Responds to Users requirements.
+
+** WAN - Wide Area Network
+
++ Spans A large Geographical area, and often multiple areas.
++ Connects multiple local area networks together.
++ Utilizes long range communications such as satellite, or radio frequency.
++ Can be private, such as an international corporation, or Public. The worlds largest public WAN is the Internet.
+
+[[./img/wan.png]]
+
+*** Types of WANs:
+
+**** PAN - Personal Area Network
++ PAN is a computer network for interconnecting electronic devices within an individual person's workspace.
++ It provides data transmission among devices such as computers, smartphones, tablets and personal digital assistants.
+
+**** CAN - Campus Area Network
++ A computer network made up of multiple internconnected local area network(LANs) within a limited geographical area.
++ It is smaller than a WAN and MAN.
++ It is used in manufacturing, warehousing, universities, and also in corporate and industrial settings.
+
+**** MAN - metropolitan Area Network
++ MAN is a high speed network that spans a larger geographic area than a local area network(LAN) but smaller than a wide area network(WAN).
++ MAN is formed by connecting multiple LANs.
++ providing the ability to integrate multiple services through the transmission of data, voice, and video.
+
+**** GAN - Global Area Network
++ GAN refers to a network composed of different interconnected computer network(WANs) that cover an unlimited geographical area.
++ It is loosely synonymous with the internet.
+
+*** EN - Enterprise Network
+An EN is a network that typically is comprised of components of both a WAN and a LAN and is owned and operated by a single organization or company.
+
+*** WAN Administrator Duties:
++ Specialized in their respective fields.
++ Network oriented tasks, rather user oriented tasks.
++ Developing and programming scripts for network task automation.
++ Testing and implementing software and hardware upgrades, network wide.
+
+** Internet
++ The internet is the global system of interconnected computer networks that uses the internet protocal suits(TCP/IP) to communicate between networks & devices.
+
+** Intranet
++ An intranet is a private network contained within an enterprise that is used to securely share company information and computing resources among empolyees.
++ Keeps your network private, or secure from outside sources.
++ Save services & protocals as the internet.
+
+** Extranet
++ An extranet is a controlled private network that allows access to partners vendors & suppliers or an authorized set of customers.
++ A portion of your network that is opened to limited outside sources.
++ Helps adminstrators maintain security to the rest of your network.
++ Allows individuals like vendors to have minimal access.
++ An extension of an entity intranet.
+
+** Segment
++ A portion of a network with linked devices separated by a connectivity device such as a switch.
+
+** Network Model
+The network model is a database model conceived as a flexible way of representing objects and their relationships.
+
+*** Centralized
+
+[[./img/centralized.png]]
+
++ A type of network where all users connect to an central server.
++ The host computer is called *Mainframe* and the end nodes are called as *terminals*.
+  
+**** Problem
++ It is difficult to maintain.
++ If the connection to mainframe is losses the whole network is down.
+
+*** Client/Server
+
++ server is responsible for providing services like file sharing, authenitication, etc..
++ The process and resource can be allocated where ever they needed including on the client.
++ The end node can perform there own process and end user task without constantly talk over the server.
+  
+[[./img/client-server.png]]
+
+*** Peer to Peer Network (P2P)
++ P2P network is an IT infrastructure that allows two or more computer systems to connect and share resources withou requiring a separate server or server software.
++ Each node is responsible for its own computing, network, security etc.. , 
+
+[[./img/p2p.png]]
+
+*** Mixed Mode Network
++ Combines the functionalities of more than one of the three different networks.
+
+* Network Topologies
+** Topology
++ Describes the arrangement or layout of a communications networks.
++ Lines out the path data communication will take.
++ Allows administrators to understand how the devices are connected on the network.
++ Two types of topologies: Physical and logical.
+  
+*** Physical Topology
++ How the devices are actually connected to one another.
++ Describes the *Shape* the network takes.
++ Allows the administrator to understand how the physical media, or cable, connects the devices together.
+
+*** Logical Topology
++ Descibes pathway data will take, regardless of the physical connection.
++ Allows an administrator to troubleshoot problems with communication in transit by understanding the path data is taking.
++ Possibly could be very different than the physical topology of the network.
+  
+** Network Connections
+*** Point To Point Connections
++ A direct connection between two nodes on a network.
++ example like telephone call, in which on telephone is connected with one other.
+
+*** Multiple Connections
++ Nodes on a network are connected to two or more nodes simultaneously. 
++ Signals are not private in Multipoint connections.
+
+*** Radiated Connections
++ A wireless connection that is either Point To Point, or Multipoint. 
++ Also considered a Broadcast connection.
+  
+NOTE: 
++ *Unicast* - Unicast is data transmission from a single sender to a single receiver. Other device on the network do not participate in the communication.
++ *Multicast* - Multicast is group communication where data transmission is addressed to a group of destination computers simultaneously.
++ *Broadcast* - Method of transferring a message to all recipients simultaneously.
+
+** Physical Bus Topology
++ Bus topology is multipoint connection.
++ The signal is bounce back from the end, when the signal bounces it interupt the transmission if there is nothing to stop it from bouncing.
++ show we have terminator at the end which is =50ohm= so it prevent the signal form bouncing.
++ The nodes are connected with the help of T connector.
+
+[[./img/physicalbustopology.png]]
+
+** Physical Star Topology
++ A type of LAN topology in which all nodes, including computers, servers, & printers, are directly connected to a contral node, also known as a hub or switch.
++ switch will determine where the data is going.
++ hub will send the data to everyone.
+
+[[./img/physicalStarTopology.png]]
+
+** Physical Ring Topology
++ Each node is connected to it =Upstream= & =Downstream= neighbors only.
++ The data flow in single direction or *Unidirectional*. so there is now collision is going to happen.
++ Because the data is recieved and retransmitted from node to node the transmittion should be strong and clear.
++ If one connection is lossed the whole network will be down, because it is unidirectional. 
+
+[[./img/physicalRingTopology.png]]
+
+** Physical Tree Topology
++ It has a root node and all other nodes are connected to it forming a hierarchy. It is also called hierarchical topology.
++ It should at least have three levels to the hierarchy.
++ first node is root node, next second level nodes, then third level nodes.
++ It is scalable in nature.
+
+[[./img/physicaltreeTopology.png]]
+
+** Physical Mesh Topology
++ All the computer are inter-connected to each other.
++ Highly reliable and efficient.
++ Expensive and difficult to implement.
+
+[[./img/physicalMeshTopology.png]]
+
+** Hybrid Topology
+
++ Star-Bus Hybrid
+[[./img/hybridTopology.png]]
+
++ Star of Star Hybrid
+[[./img/sofs.png]]
+
++ Star-Ring Hybrid
+[[./img/starRing.png]]
+
+** Logical Bus, Ring, and Star Topologies
+*** Logical Bus
+[[./img/logicalbus.png]]
+
+*** Logical Ring
+[[./img/logicalRing.png]]
+
+*** Logical Star Topology
+[[./img/logicalStar.png]]
+
+* Network Hardware & Media
+** Network Media
++ The medium used for telecommunication between network devices.
++ Network media can be classified according to the hardware and technology associated with it.
++ There are both wrired and wireless technologies that are associated with network media.
+
+** Bounded Network Media
++ Actual physical media. Media that can be felt, and seen.
++ Copper and fiber optic cables are examples of Bounded network media.
++ Utilizes a physical conductor such as a metal wire or a glass or plastic core cable.
+
+** Copper Media
++ Either a single copper core, or made up of twisted pairs of copper strands.
++ Most common implementations are Coaxial(Coax) cable & Twisted Pair Cable.
+
+[[./img/coppermedia.png]]
+
+** Twisted Pair Cable
++ Two or more pairs of cable twisted together.
++ Color coded wrapped plastic.
++ Pairs are wrapped in another plastic sheath.
++ Will utilize an RJ-45 connector for data.
+
+[[./img/twistedPair.png]]
+
+*** T568/A Wiring Standards
+[[./img/T568-A.png]]
+
+*** T568/B wiring Standards
+[[./img/T568-B.png]]
+
+** STP and UTP Cable:
+*** Shielded Twisted Pair Cabling
++ Twisted Pair copper cabling that has a metal foil, or braided shielding surrounding the pairs.
++ Decreases the susceptibility of EMI.
++ More expensive that UTP and can be more difficult to work with.
+
+*** Unshielded Twisted Pair Cabling
++ Unlike STP, UTP cabling does not have any protective metal coating.
++ Very susceptible to EMI.
++ Relatively inexpensive and very easy to work with.
+  
+** Twisted Pair Cabling Categories
+| Category | Description                                                  |
+|----------+--------------------------------------------------------------|
+| Cat1     | Voice only... Outdated                                       |
+| Cat2     | Rare today. Token based networks only. Outdated              |
+| Cat3     | "Ethernet" 10Mbps. Voice traffic.                            |
+| Cat4     | Superseded by Cat5. Rarely used today                        |
+| Cat5     | "Fast Ethernet" 100Mbps, 100Mhz. Frequency                   |
+| Cat5e    | 100Mhz. Frequency, addressed Crosstalk issues. Up to 350Mbps |
+| Cat6     | "Gigabit Ethernet" 1Gbps Data rate. 200-250Mhz.              |
+| Cat6a    | Augmented Cat6. Greater than 1Gbps 500Mhz.                   |
+| Cat7     | 10Gigabit Ethernet. Upwards of 10Gbps + speeds               |
+
+*** Twisted Pair Cabling breakdown
+[[./img/OIP.jpeg]]
+
++ RJ-45 Male Connector(8 pins)
+[[./img/RJ-45_8.png]]
+
++ RJ-11 male connector(4 pins)
+[[./img/RJ-11_4.png]]
+
+** Coaxial Cabling
++ The single copper core is coated non-conductive insulated coating.
++ The next layer is braided metal shielding, it can be copper or steel.
++ The purpose of shielding the to protect the core from EMI.
++ The outer layer is Plastic sheathing.
+
+[[./img/coaxialcabling.png]]
+
+** Coax Cable Types
++ RG58/U --Ethernet --Solid Core --50 ohms impedance --5mm
++ RG58/AU --Ethernet --Stranded Core --50 ohms impedance --5mm
++ RG8 --Ethernet --solid Core --50 ohms impedance --10mm
++ RG9 --Cable TV and modems --Standed core --50 ohms impedance --10mm
++ RG62 --ARCNET --93 ohms impedance --5mm
++ RG59 --LP video/Receivers --75 ohms --6mm
++ RG6 --Cable TV signal routing --75 ohms
+  
+** Coax Connector Types
+[[./img/coaxconnector.png]]
+
+[[./img/coaxconn2.png]]
+
+** Fiber Optic Cabling
+
+[[./img/fibercable.png]]
+
+** Fiber Modes
+*** Single mode fiber
++ Single beam of light can pass through the core.
++ 30Mhz Bandwidth, Modulated in intensity to transmit data.
+
+*** Step-Index-Multimode Fiber
++ Cladding changes the speed and velocity of the light travelling through the medium.
++ When the velocity changes, it is called the *stepdown*.
+
+*** Graded-Index Multimode Fiber
++ Up to 2Ghz in bandwidth.
+
+** Fiber Connector Types
+
+[[./img/fiberconn.png]]
+
+** Media Converters
++ Fiber to Coaxial Cable.
++ Multi-Mode Fiber to Ethernet.
++ Single-Mode Fiber to Ethernet.
++ Single-Mode Fiber to Multi-mode fiber.
+
+** Structure Cabling Standards
++ *Entrance Facilities*: Service entrance to the building, the Demarcation Point, and Backbone Connections.
++ *Backbone Wiring*: Connections between Communications closets & equipment rooms.
++ *Equipment Room*: Main Cross connect(MCC), point of termination for backbone wiring.
++ *Telecommunications Closet*: Contains the connection equipment for any nearby workstations, as well as connections between communications cross connects.
++ *Horizontal Wiring*: The cabling that goes between the workstations and the Telecommunications closet.
++ *Work Area*: Everything coming from the wall to the workstation includes the faceplate, connectors and wiring.
+
+** 568/A/B/C Standards
++ *568/A standards* - Older standard for data, voice, and video in commercial buildings. Outdated by 568/B and /C standards.
++ *568/B standards* - Earlier standard including STP & UTP performance minimums as well as Fiber Optic standards. Portions are now obsolete, but not completely.
++ *568/C standards* - Current standard minimums for optimizing network media performance in commercial buildings. Sepcifies Cat6a as the media type recommended.
+
+** Premise Wiring
++ *Drop Cable* - forms the final external link between the subsciber/user and the feeder cable.
++ *Patch Panel* - socket groups that manually connect incoming and outgoing line together in communication and electronic systems.
++ *Patch Cable* - connects two electronic or optical devices to each other for signal routing.
++ *IDF*(intermediate distribution frame) - a free-standing or wall-mounted rack for managing and interconnecting a telecommunications cable between end-user devices and the main distribution frame. 
++ *MDF* - is the primary hub or demarcation point that interconnects private or public IT and telecommunication lines
++ *Wiring Closet* - a small room commonly found in institutional buildings, such as schools and offices where electrical connections are made.
+
+** Plenum Vs PVC
+*** PVC
++ Polyvinyl-Chloride Cabling. 
++ Normal, standard cable.
++ Inexpensive and easy to work with.
++ When PVC burns it allows fire to travel through the cable and lets off noxious fumes.
+
+*** Plenum Cable
++ Used in Air Handling Spaces and HVAC areas in building to meet fire code requirements.
++ More expensive than PVC.
+
+* Straight-through, crossover, and Rollover cables
+** Modular Connector
++ The electrical connector that is commonly used in the following:
+    - Telephone systems
+    - Data networks
+    - Low-speed serial connections
++ Known by the following names:
+    - RJ connector
+    - Modular phone jack/plug
+    - Western jack/plug
++ The male modular connector is called a plug.
++ Used to terminate loose end of cables.
++ The female modular connector is called a jack or a socket.
++ Used to fixed locations, such as on equipment.
++ Modular connector example: 8 position 8 contact(8P8C) connector.
+
+[[./img/ethernet.png]]
+
+** 8 Position 8 Contact(8P8C) connector
+An 8P8C connector used in an Ethernet computer network that uses twisted pair cables in the following:
++ Commonly referred to as RJ-45
++ Resembles an actual RJ-11 connector used on telephone cables.
++ Has nothing to do with the actual RJ-45 standard.
+
+** T568A & T568B wiring schemes
+The TIA/EIA-568-B standard specifies the following:
++ A 4-pair 100 ohms UTP cable be terminated in an eight-position modular jack(an 8P8C modular connector)
++ Provides two wiring schemes: T568A and T568B
++ Defines the pinout or order of connections for wires in 8P8C modular connector plugs and jacks.
+
+In order to terminate an UTP cable with an 8P8C modular connector, we should know the following:
++ Which wire of the cable connects to which pin of the connector
++ T568A and T568B wiring standards
+    - Govern the assignments of wires to the pins of an 8P8C connector.
+
+[[./img/UTPcable.png]]
+
++ On the back of an 8P8C connector, there are 8 pins numbered from 1 to 8.
++ The difference between T568A and T568B wiring scheme is that there is an interchange of green and orange wire pairs.
+
+[[./img/pinpair.png]]
+
++ The TIA/EIA-568-B standard recommends using T568A pinout for horizontal cables.
++ The T568B pinout became widely used because of the following:
+    - Matched the older AT&T 258A pinout
+    - The AT&T 258A pinout was widely used in the UTP cabling infrastructure at the time TIA/EIA-568 was published.
+
+** Horizontal Cabling
+Horizontal cabling wiring can be IW(inside wiring) or plenum cabling and connects telecommunications rooms to individual outlets or work areas on the floor, usually through the wireways, conduits or ceiling spaces of each floor. A horizontal cross-connect is where the horizontal cabling connects to a patch panel or punch up block, which is connected by backbone cabling to the main distribution facility.
+
+[[./img/horizontalcable.png]]
+
+** MDI
++ Stands for medium dependent interface.
++ A hardware interface that establisheds a direct physical and electrical connection with an UTP cable.
++ An MDI port is the traditional port on the back of a computer's NIC.
++ An MDI device is a device with an MDI port
+    - example: A computer or a laptop
+
+** MDI-X
++ Stands for Media Dependent Interface with Crossover.
++ MDI-X is a crossover of the Medium Dependent Interface.
++ The Ports of devices that provides connectivitiy, such as a switch or a hub, are setup as Media Dependent Interface with Crossover(MDI-X)
++ An MDI-X device is a device with an MDI-X port
+    - example: A switch or a router
+
+[[./img/MDI_MDI-X.png]]
+
++ The transmit and receive connections of an MDI port and an MDI-X port are opposite each other.
++ When an MDI device uses a Pair of wires to transmit signals, the MDI-X device on the opposite side uses the same pair to receive the signals, and vice versa
++ The arrangement of twisted pair wires allows the signals to be transmitted and received in an UTP cable.
+
+
++ The transmit and receive connections of an MDI port and an MDI-X port are opposite each other.
++ When an MDI device uses a Pair of wires to transmit signals, the MDI-X device on the opposite side uses the same pair to receive the signals, and vice versa
++ The arrangement of twisted pair wires allows the signals to be transmitted and received in an UTP cable.
+
+** Straight-through cable
++ A type of Ethernet cable used to connect dissimilar devices
+    - example: An UTP cable connecting a computer and a switch.
++ Also known as a patch cable.
++ UTP cables are used in modern Ethernet networks.
++ The wires of an UTP cable cannot be plugged directly into the following:
+    - A computer's NIC.
+    - A switch's port
+
+[[./img/straight-through-cable.png]]
+
+*** Wiring standards for RJ-45
++ Wiring standards for an RJ-45 connector are as follows:
+    - EIA/TIA 568A
+    - EIA/TIA 568B
++ Specifies how to wire an RJ-45 connector on an Ethernet network.
+
+*** Straight-through cable - Termination
++ Only one of the following standards are used for terminating the ends of an UTP cable in RJ-45 connectors:
+    - T568A
+    - T568B
+
+[[./img/termination.png]]
+
++ Straight-through cables are used when connecting an MDI device to an MDI-X device.
+[[./img/stcable.png]]
+
++ If a straight-through UTP cable is terminated on both sides using the T568A wiring scheme, then the T568A color scheme and the pinout or the order of connections of all 8 wires will be as shown in the diagram.
+[[./img/T568A.png]]
+
+** Ethernet Network -- 10Base-T and 100Base-TX
++ When a computer uses pins 1 and 2 of a pair of wire to transmit data, the switch will receive those data on the same pins.
++ When a switch transmits the data using pins 3 and 6 on a different pair of wires, the computer will receive those data on the same pins.
++ In an Ethernet network, such as 10Base-T and 100Base-TX, pins 4 and 5 of the blue pair, and pins 7 and 8 of the brown pair are not used.
++ In a 1000Base-T Ethernet cable, such as Cat 5e UTP cable, all four pairs of wires will be used.
+
+[[./img/ethernetNetwork.png]]
+
+** Crossover Cable
++ Used to connect the following:
+    - An MDI device to an MDI device.
+    - An MDI-X device to an MDI-X device.
++ Connects similar devices.
+    - example: A switch and a switch
+
+[[./img/crossovercable.png]]
+
++ A crossover UTP cable has 8-pin modular connectors on each end that are terminated in such a manner that the pin and wire assignments are crossed over at the ends.
++ Each pin and wire on one end of the cable doesn't connect to the exact same pin on the other end of the cable.
+
+[[./img/UTPcrossovercable.png]]
+
++ When we connect two similar devices, such as a switch and a switch, using an UTP cable, the crossover of pins becomes necessary because of the following:
+    - These devices will be transmitting on the same pins, 1 and 2.
+    - These devices will also be receiving on the same pins, 3 and 6.
+
+** Crossover cable - Termination
++ The end of a crossover cable are terminated in 8-pin modular plugs by using the T568A wiring and the T568B standard.
++ If one end of the cable uses T568A standard for wire and pin assignment in its 8-pin modular plug, then the other end should use the T568B standard in its 8-pin modular jack.
+
+[[./img/crossoverTermination.png]]
+
+** Auto-MDI-X
++ Auto-MDI-X stands for Auto-sensing Medium-dependent Interface Crossover.
++ An Auto-MDI-X hardware interface automatically detects when a straight-through cable is used to connect similar devices and accordingly configures its connection to transmit and receive data.
++ Most modern Ethernet devices support the Auto-MDI-X feature.
+
+** Rollover Cable
++ Used to connect a PC or a laptop directly to the console port of a switch or a router.
++ Has an 8P8C connector on one end and a RS-232 based connector, such as DB-9 connector, on the other end.
++ Cisco console cable is an example of a rollover cable.
++ Cisco console cable is typically used by network administrator to configure a cisco switch or a cisco router.
+
+[[./img/rollovercable.png]]
+
++ Pin 1 of an 8P8C connector is connected to Pin 8 of a RS-232 connector; Pin 2 is connected to Pin 7, and so on.
++ A rollover cable is also called a Yost cable because it was invented by Dave Yost.
+
+[[./img/rollover.png]]
+
+* More Cables, Connectors & Transceivers
+** DB Connectors
++ D connectors created by Cannon in 1952
+    - Used in Token Ring Networks
+    - External Floppy disk drives
+    - Mouse connectors
+    - Replaced by USB
++ D shape:
+    - Ensures cables correctly attached.
+    - Designed to work with the EIA/TIA 232 serial interface standard
+    - # represents pins e.g. DB9(RS-232), DB25
+
+[[./img/DBconn.png]]
+
+** F Connector/F type connector
+Coaxial RF connector:
+    + Commonly used for cable, satellite TV/cable modems.
+    + Seen in TV antenna connections.
+    + Usable bandwidth up to several GHz
+
+[[./img/Fconn.png]]
+
+** Punch-down Blocks
+Typically used for telephony(voice) electrical connections:
+    + Copper wires 'punched down' into open-ended slots.
+    + 66 block is a model number(50 rows)
+        - Subject to crosstalk - not suitable for 100Mbps.
+    + 100 block replaced 66 block
+        - Often used to terminate cable runs
+
+[[./img/punch-down.png]]
+
+** Fiber Distribution Panel
+AKA fiber distirbution hub(FDH):
+    + Patch panel used to terminate fiber optic cables.
+    + Provides access to the cable's individual fibers for cross connection.
+
+[[./img/fiberdistribution.png]]
+
+** Transceivers
+Transmitter/Receiver - converts the serial electrical signals to serial optical signals and vice versa:
+    + Cisco Gigabit Interface Converter(GBIC) is a hot-swappable input/output device that plugs into a Gigabit Ethernet port or slot, linking the port with the network.
+    + Small form-factor Pluggable(SFP) Gigabit Interface Converter is a hot-swappable input/output device that plugs into a Gigabit Ethernet port or slot(1 Gbit/s).
+    + (SFP+) is an enhanced version of the SFP that supports data rates up to 16 Gbit/s.
+    + Quad Small Form-factor Pluggable(QSFP)(4 x 1/10/14/28 Gbit/s).
+
+[[./img/transceivers.png]]
+
+** Network Storage - Fiber channel Over Ethernet
+Encapsulates Fiber channel frames over Ethernet(SANs)
+    + Treated as a non-routable network protocol
+    + Differs from iSCSI which runs on TCP/IP.
+
+[[./img/fiberchannel.png]]
+
+** InfiniBand(IB)
+Protocol used in high-performance computing
+    + High performance/low latency.
+    + Direct or Switched internet connection between servers/storage.
+
+[[./img/infiniband.png]]
+
+* Network Hardware - UnBounded
+** Unbounded Network Media
++ Media that is not bound by physical characteristics such as copper or fiber.
++ Network media that transmits wirelessly.
++ Has specific advantages over bounded media as well as varied disadvantages.
+
+** Radio Networking
++ In radio networking the data is transfer as a RF(radio frequency).
++ It can range from 20kHz to 300GHz depend on the region.
++ It is very susceptible to EMI.
+
+** Spread Spectrum
++ A system originally developed for military applications, to provide secure communications by spreading the signal over a large frequency band.
++ It send more the two type of frequency.
+
+*** There are 2 types
+**** DSSS: Direct Sequence spread spectrum
++ A spread-spectrum modulation technique primarily used to reduce overall signal interference.
++ The DSSS modulation makes the transmitted signal wider in bandwidth than the information bandwidth.
+
+**** FHSS: Frequency Hopping Spread Spectrum
++ The repeated switching of the carrier frequency during radio transmission to reduce interference and avoid interception.
+
+** Infrared Transmission
++ A wireless mobile technology used for device communication over short ranges.
++ It requires line-of-sight, has a *short transmission range* and is unable to *penetrate walls*.
++ It is 300-300,000Ghz Range.
+
+*** Type of infrared transmission
+**** SIR: Serial Infrared
+**** FIR: Fast Infrared
+**** vFIR: Very Fast Infrared
+
+** Bluetooth Transmission
++ allows device to communicate with each other without cables or wires.
++ Short range radio frequency.
++ 2.4 Ghz frequency.
++ Max range 30 Feet.
++ Utilizes method of *Pairing* Devices when connecting.
+  
+** Microwave Transmission
++ The transmission of information by electromagnetic waves with wavelengths in the microwave frequency range of 300 MHz to 300 GHz(1m - 1 mm wavelength) of the electromagnetic spectrum.
++ Point-to-Point line of site communication.
++ *Very long range* communication.
+
+** Wireless Access Point
++ Allows wireless device to connect to the network.
++ Connects a wireless network to a wired network.
+
+** Service Set Identifier
++ 32-bit Alphanumeric string
++ Identify your wireless access point.
++ The "Name" of your network.
++ Should disable its broadcast after it is changed from default.
+
+** Installing your WAP
++ Choose the WAP that will fit your need.
++ Consider proper placement.
++ Change Administrator password.
++ Configure WAP settings(SSID, encryption, power, etc.)
++ Disable SSID.
++ Test for functionality.
+
+* Network Connectivity Devices
+** Network Interface Card
++ Can be wired such as this one, or wireless like those found in laptops.
++ Ethernet Port to connect to the Media.
++ Connects either directly to the motherboard, through another card, or via USB, Firewire port, or PC Card.
++ Typically will have connectivity/activity lights.
+
+[[./img/NIC.png]]
+
+** Transceiver
++ Is an electronic device which is a combination of a radio *transmitter* and a *receiver*.
++ Built directly on the network card.
++ example: GBIC
+
+** Switch
++ Common connecting point for nodes on a network.
++ Looks at the MAC address of each packet of data for forwarding.
++ A managed switch allows the administration to its configuration and is able to monitor. It used console cable and console port to access it.
++ administrator can do port mirror.
++ administrator can combin two or more port which is called link aggregation/ port teaming/ trunking.
++ channel bounding which adding multiple NIC to single MAC address.
+
+[[./img/switch.png]]
+
+** Router
++ Looks at the IP address of the data.
++ Can only be used with routable protocols.
++ Can be a single dedicated device, incorporated in a multifunction device, or as software on a device or node that has two NICs.
+
+[[./img/router.png]]
+
+** Gateway
++ Similar to a Router in the way it functions.
++ Allows networks with =dissimilar= protocols to communicate.
++ Utilize routable protocols similar to a router.
++ Can be a hardware device, or could be software within a router.
+
+** Virtualization
+*** Virtual Switch
+Functions exactly as a physical switch. Cannot directly communicate between two virtual switchs. A router needs to be configured for this.
+
+*** Virtual Router
+A virtual router is the software that can be installed on a device with two NICs for routing traffic.
+
+*** Virtual Server
+A server that operates indepently of its host machine. software based CPU, RAM, NIC and hard drive.
+
+*** Virtual Machines
+Similar to a virtual server in that it has its own software based CPU, RAM, NIC and hard drive. It is a software implementation of a machine to perform specific tasks and execute commands emulating a physical machine.
+
+*** Virtual Desktop
+In windows systems a single desktop is the default that can be opened. Virtual Desktop allows multiple desktops to be opened at the same time. Linux supports this with most distributions. Microsoft requires extra software installed to allow the default to be changed.
+
+** NaaS (Network-as-a-service)
++ NaaS is a cloud service model in which customers rent networking services from cloud providers.
++ NaaS allows customers to operate their own networks without maintaining their own networking infrastructure.
++ For example, this may include wireless, security, or unified communications services in a public cloud or on virtualized customer premise equipment (vCPE)
+
+[[./img/NaaS.png]]
+
+** IaaS(Infrastructure-as-a-service)
++ A cloud computing model that provides on-demand access to computing resources such as servers, storage, networking, and virtualization.
++ Examples of IaaS include Rackspace, Amazon Web Services (AWS) Elastic Compute Cloud (EC2), Microsoft Azure, Google Compute Engine (GCE) and Joyent.
+
+[[./img/IaaS.png]]
+
+** SaaS(Software-as-a-Service)
++ A software distribution model in which a cloud provider hosts applications and makes them available to end users over the internet.
++ Examples include Dropbox, Google Workspace, and Salesforce
+
+[[./img/SaaS.png]]
+
+** PaaS(Platform-as-a-Service)
++ A complete cloud environment that includes everything developers need to build, run and manage application.
++ Example AWS Elastic Beanstalk, Google App Engine, and Adobe Commerce.
+
+[[./img/PaaS.png]]
+
+** Legacy Connectivity Devices
+*** Repeater
+Simple device that receives traffic and only boosts signal and transmits it out.
+
+*** Hub
+Similar to a repeater, only receives traffic from a port, and sends to all ports without looking at the data traffic.
+
+*** Bridge
+Divides a logical bus network into segments by looking at the MAC address of the data packet and transmits data accordingly.
+
+** Noise
++ Noise, or Electrical Noise is unwanted signal on the transmission medium that interferes with normal data traffic. 
+
+*** Noise Control Methods: Grounding
++ Connecting the shield or the conductor of a cable segment in one place to a ground point.
++ Ground point connects directly to the ground.
++ Drains unwanted signal(Noise) away from the cable.
++ Ground for Performance.
++ Ground for Safety.
+
+*** Noise Control Methods: Shielding
++ The shield acts as a Faraday cage to reduce electrical noise from affecting the signals, and to reduce electromagnetic radiation that may interfere with other devices.
++ The shield minimized capacitive and inductive coupting from other electrical sources.
+
+** Differential Signaling
+
+[[./img/diffsignal1.png]]
+
+** Other Considerations for Noise
++ Proper Termination
++ Matching Impedance.
++ Remember to be Mindful of cable runs.
++ follow manufacturer specifications for equipment and cabling installation and grounding.
+
+* Advanced Networking Devices
+** Networks 1990's
++ Server
++ Router
++ Hub
++ WWW invented
++ 10 MB half-duplex
++ Cisco - 251 employee
+
+** Network 201x's
++ Multilayer devices
++ Wireless
++ Virtualization
++ Cloud computing
++ Video/ VoIP / QoS
++ Advanced security threats
++ Cisco - 72k + employee
+
+** Multilayer Switch
++ Switches general swtich frames at Layer 2
++ Multilayer switches operate at layers 2-7
++ Usable bandwidth up to several GHz
++ Ports can be switched (MAC address) or configured to route(IP address)
+
+[[./img/multilayerswitch.png]]
+
+[[./img/multilayerswitchdiag1.png]]
+
+[[./img/multilayerswitchdiag2.png]]
+
+** Wireless Controller
++ Wireless Access Points allow devices to communicate.
++ Wireless Controllers take over from Aps(become lightweight forwarders).
++ Consist of SSID, logical interfaces and physical port(s).
++ Ports can be switched(MAC address) or configured to route (IP address).
++ WLCs permit mobile devices to roam.
++ Roaming means keeping same IP address and association.
++ Roaming can be
+    - INTRA-CONTROLLER ROAMING
+    - INTER-CONTROLLER ROAMING
+
+** Load Balancer
++ Distributes incoming requests between two or more devices
++ Can balance web traffic, streaming video, database.
++ Uses a virtual IP address and then forwards traffic to network devices.
+
+[[./img/loadbalancer.png]]
+
+** Intrusion Detection System(IDS) Intrusion Prevention System(IPS)
++ Both inspect traffic to detect unauthorized access.
++ Monitor network for intrusions or malicious activity.
++ Can send alerts, alarms, log messages or SNMP traps.
++ IPS works inline(placed in the traffic flow).
++ IDS only receives a copy of the traffic.
+
+** AAA/ RADIUS Server
++ Authentication validates identity.
++ Authorization determines what a user can do.
++ Accounting gives you an audit trail.
++ Provides modular and scalable model for network and device access.
++ Uses RADIUS, TACACS+ AND kerberos as authentication methods.
+
+[[./img/AAA.png]]
+
+** Unified Threat Management(UTM) appliance
++ Integrates a range of security features into a single appliance.
++ Combines firewall, anti-virus gateway, IDS/IPS, VPN.
++ UTM brands are Sophos, WiJungle.
++ Simplified installation and maintenance.
++ Saves time and money.
++ Single point of failure.
+  
+** Next Gen Firewall(NGFW)
++ Third generation
++ Combines FW with other filtering e.g. application, IPS.
++ Can include antivirus, ID management, TLS/SSL, QoS.
++ Combines firewall, anti-virus gateway, IDS/IPS, VPN.
++ 80% malware targets applications.
++ Port blocking/filtering no longer enough.
++ Deep Packet Inspection (DPI).
++ DPI blocks worms, viruses at wire speeds.
+
+[[./img/NGFW.png]]
+
+** VoIP PBX
++ IP Private Branch Exchange is a phone system with IP connectivity.
++ Connects phone extensions using existing LAN/WAN.
++ IP PBX can be hardware or software based.
++ Voice gateway connects to the PSTN.
++ If voice is enabled.
+
+[[./img/VoIP.png]]
+
+** Content Filter
++ Also referred to as information filtering.
++ Software based usually.
++ Blocks harmful websites or files such as .exe
++ Can be local, network or ISP level.
++ If voice is enabled.
+
+[[./img/contentfilter.png]]
+
+
+

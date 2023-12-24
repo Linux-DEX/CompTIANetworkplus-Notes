@@ -1,0 +1,20 @@
+#+TITLE: CompTIA Network+
+#+DESCRIPTION: Data Transmissions
+#+AUTHOR: Linux-DEX
+#+OPTIONS: toc:3
+#+CAPTION: My Image
+
+* TABLE OF CONTENT :toc:
+- [[#data-transmission][Data Transmission]]
+
+* Data Transmission
++ The exchange of data between devices on a network by one method or another.
++ Involves non-voice transmission such as text, video, graphics and audio over a network medium, unlike telephony, which is only voice.
++ Type typical transmission across a computer network, also is synonymous with a data network.
+
+
+
+
+
+
+
