@@ -1,0 +1,106 @@
+#+TITLE: CompTIA Network+
+#+DESCRIPTION: Media Access Methods
+#+AUTHOR: Linux-DEX
+#+OPTIONS: toc:3
+#+CAPTION: My Image
+
+* TABLE OF CONTENT :toc:
+- [[#media-access][Media Access]]
+- [[#contention-based-media-access][Contention-based Media Access]]
+  - [[#carrier-sense-multiple-access-collision-detection-csma-cd-][Carrier Sense Multiple Access Collision Detection( CSMA-CD )]]
+  - [[#carrier-sense-multiple-access-collision-avoidance-csma-ca-][Carrier Sense Multiple Access Collision Avoidance( CSMA-CA )]]
+- [[#controlled-media-access][Controlled Media Access]]
+  - [[#multiplexing][Multiplexing]]
+- [[#polling][Polling]]
+
+* Media Access
++ Rules that govern what node has access to transmit on the media at any given time.
++ All nodes on the network will be configured to follow these rules.
++ These rules ensure data delivery and data integrity is maintained.
+
+* Contention-based Media Access
++ Nodes compete with one another for media access time and utilization.
++ Also called competitive, or collision based.
++ Easy to implement and maintain, however data exchange can be delayed for nodes competing.
++ Example of contention-based access methods includes: CSMA/CD for bus-topology Ethernet LANs and CSMA/CA for WLANs.
+  
+** Carrier Sense Multiple Access Collision Detection( CSMA-CD )
++ Contention based media access method with a 5 step process used in Ethernet LANs.
++ Attempts to provide collision free data transfer communications.
++ Nodes transmit when they have data to send.
++ When collisions occur, they be detected and managed.
+  
+*** CSMA-CD works
++ *Step 1* : Check if the sender is ready for transmitting data packets.
++ *Step 2* : Check if the transmission link is idle.
++ *Step 3* : Transmit the data & check for collisions.
++ *Step 4* : If no collision was detected in propagation, the sender completes its frame transmission and resets the counters.
+  
+[[./img/CSMA-CD-work.png]]
+
+*Note*: In wireless it doesn't work very well. It is good in wire connection.
+
+** Carrier Sense Multiple Access Collision Avoidance( CSMA-CA )
++ Contention Based media access method with a Six step process primarily used in wireless LANs.
++ Attempts to provide collision free communications.
++ Nodes transmit when they have data to send, but take steps before transmitting to avoid collisions.
+
+*** CSMA-CA
++ *Step 1* : When a frame is ready, the transmitting station checks whether the channel is idle or busy.
++ *Step 2* : If the channel is busy, the station waits until the channel becomes idle.
++ *Step 3* : If the channel is idle, the station waits for an Inter-frame gap(IFG) amount of time and then send the frame.
++ *Step 4* : After sending the frame, it sets a timer.
++ *Step 5* : The station then waits for acknowledgement from the receiver. If it receives the acknowledgement before expiry of timer, it marks a successful transmission.
++ *Step 6* : Otherwise, it waits for a back-off time period and restarts the algorithm.
+
+[[./img/CSMA-CA-work.png]]
+
+*** Contention Domain
++ Also called a Collision Domain.
++ Nodes on the network compete for access, and collision occur as a result.
++ _Switches_ control the size of the contention domain.
++ Larger networks are divided into smaller contention domains to improve performance.
+  
+*** Broadcast Domain
++ Logical area of a network where all nodes can communicate with all other nodes.
++ _Routers_ control the size of the Broadcast domain.
++ Refers to the set of devices that receive broadcasted data transmissions from any node on the segment.
+
+[[./img/contentionandbroadcast.png]]
+
+* Controlled Media Access  
++ Also called deterministic media access, has a device controls which nodes have access to the network media, and for how long.
++ More difficult to implement and maintain as extra hardware and maintenance is needed.
++ Ensures device that have time sensitive data can transmit when needed, so are beneficial to time sensitive networks.
+
+** Multiplexing
+Media Access method that takes multiple signals and combines them over a single medium.
+
+*** Can be multiplexed using TDM - Time Division Multiplexing
++ Channel divided into time slots.
++ Each node assigned a time slot.
++ Multiple =Baseband= channels can be combined.
+
+*** Or using FDM - Frequency Division Multiplexing
++ Data from multiple nodes is sent over many frequencies.
++ Each node has complete access to its frequency and dedicated communication with the mux.
++ The mux combines the received signals from the nodes and transmits it across the medium.
++ Multiple =Broadband= signal can be combined.
+
+*** Both TDM & FDM rely on the central device called a multiplexer
+A *Mux* or *Multiplexer*, is the device that combines signals and transmits them to the receiving end where a *De-Mux*, or *De-multiplexer* separates the signals.
+
+* Polling
++ A central deivce goes to each node in the network in turn to see whether the node has data to transmit.
++ Guaranted access as the process is repeated constantly.
++ Not effective in time sensitive networks as time is potentially wasted in requesting from nodes that do not have data.
++ A variation of polling is *Demand Priority*.
++ Each node signals its state of whether it has data to transmit or not.
++ Contains priority measures and also safeguards to ensure nodes cannot constantly transmit.
+
+
+
+
+
+
+

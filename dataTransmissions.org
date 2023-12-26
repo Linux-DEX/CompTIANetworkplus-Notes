@@ -6,11 +6,81 @@
 
 * TABLE OF CONTENT :toc:
 - [[#data-transmission][Data Transmission]]
+- [[#instantaneous-data-transfer][Instantaneous Data Transfer]]
+- [[#serial-data-transmission][Serial Data Transmission]]
+  - [[#synchronous-data-transmission][Synchronous Data Transmission]]
+  - [[#asynchronous-data-transmission][Asynchronous Data Transmission]]
+- [[#parallel-data-transmission][Parallel Data Transmission]]
+- [[#baseband-transmission][Baseband Transmission]]
+- [[#broadband-transmission][Broadband Transmission]]
+- [[#broadband-over-power-lines][Broadband over Power Lines]]
 
 * Data Transmission
 + The exchange of data between devices on a network by one method or another.
 + Involves non-voice transmission such as text, video, graphics and audio over a network medium, unlike telephony, which is only voice.
 + Type typical transmission across a computer network, also is synonymous with a data network.
+
+* Instantaneous Data Transfer
++ Data is not stored in memory before it is transmitted.
++ Examples of Instantaneous Data Transfer: Online chat programs, video conferencing, or voice conferencing via an internet program.
++ Data is immediately converted to a network compatible format as it is being generated and transmitted.
+
+* Serial Data Transmission
++ The transmission of bits occurs once per clock cycle.
++ 1 bytes = 8 serial bits.
++ Ethernet, as well as peripheral devices like mice and keyboards use Serial Data Transmission.
++ May use *Synchronous*, or *Asynchronous* methods to delineate between the start bits, stop, bits, error checking/correcting bits, and the data itself.
+
+[[./img/serialDataTrans.png]]
+
+** Synchronous Data Transmission
++ The term synchronous is used to describe *a continuous and consistent timed transfer of data blocks*.
++ Uses time intervals and must be in sync.
++ These types of connections are used when large amount of data must be transferred very quickly from one location to the other.
+
+[[./img/synchronousDT.png]]
+
+** Asynchronous Data Transmission
++ Asynchronous transmission, sometimes referred to as start/stop transmission.
++ involves sending data to the receiver using the flow control method.
++ Special start and stop patterns between each byte of data.
++ Data is synchronized between the sender and the receiver without the use of a clock. 
++ Data is transmitted one character or 8 bits at a time.
+
+[[./img/asynchronousDT.png]]
+
+* Parallel Data Transmission
++ Uses multiple transmissions lines, wires, or cables simultaneously.
++ 1 character is 8 parallel bits.
++ Example, SCSI, Parallel ports, and PC Cards Bus uses Parallel Data Transmission.
+
+[[./img/parallelData.png]]
+
+* Baseband Transmission
++ Transmits _digital signal_ without changing it to _analog signal_.
++ Requires a channel having a bandwidth that starts at 0.
++ Digital signals sent via DC(Direct current) pulses.
++ All devices share the medium or channel and cannot transmit and receive simultaneously.
++ Multiple Baseband channels can be combined over I medium using a channel with specific time slots.
+
+[[./img/baseband.png]]
+
+
+* Broadband Transmission
++ Changes _digital signal_ into _analog signal_ for transmission.
++ Uses a channel with bandwidth not starting at 0.
++ Uses Analog signaling over the complete bandwidth available.
++ Signals travel in one direction only as devices connot send and receive over the same channel.
++ More than one Broadband channel can be combined and sent across multiple frequencies, channels or over just one medium.
+
+[[./img/broadband.png]]
+
+[[./img/basebandvsbroadband.png]]
+
+* Broadband over Power Lines
++ BPL is an emerging technology that attempts to bring High Speed internet to homes through power lines.
++ Uses the electrical infrastructure already in place.
++ Can reach speeds from 500kbps to 3Mbps, or around DSL and cable speeds.
 
 
 

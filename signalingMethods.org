@@ -1,0 +1,47 @@
+#+TITLE: CompTIA Network+
+#+DESCRIPTION: Signaling Methods
+#+AUTHOR: Linux-DEX
+#+OPTIONS: toc:3
+#+CAPTION: My Image
+
+* TABLE OF CONTENT :toc:
+- [[#definition][Definition]]
+  - [[#signal][Signal]]
+  - [[#analog-signal][Analog Signal]]
+- [[#analog-signal-characteristics][Analog Signal Characteristics]]
+- [[#digital-data-transmission][Digital Data Transmission]]
+- [[#digital-data-transmission-encoding-schemes][Digital Data Transmission Encoding Schemes]]
+  - [[#on-off-keying][On-Off keying]]
+  - [[#manchester-encoding][Manchester Encoding]]
+
+* Definition
+** Signal
+Data translated into electromagnetic information that can be transmitted and received by communications devices.
+
+** Analog Signal
+A signal that carries data in a continuous stream or waveform via either electromagnetic, or optical energy.
+
+* Analog Signal Characteristics
++ Analog signals are time-varying electronic signals.
++ It can be either periodic and non-periodic.
++ It comsumes more power than a digital signal.
++ It is more helpful for audio/video recordings.
+
+[[./img/analogcharac.png]]
+
+* Digital Data Transmission
++ Digital data utilizes voltage differences that represent the 1's and 0's.
++ Each bit takes a pre-determined period of time to transmit.
++ Bit patterns are used to establish the start and stop of the sequence and to sync clocks.
++ Sender and receiver synchronize their clocks to ensure proper receipt of data.
+
+  [[./img/digitaltrans.png]]
+
+* Digital Data Transmission Encoding Schemes
+** On-Off keying
+*** NRZ- Non-Return To Zero variation
+*** NRZI- Non-Return To Zero Inverted variation
+
+** Manchester Encoding
+
+
