@@ -1,0 +1,145 @@
+#+TITLE: CompTIA Network+
+#+DESCRIPTION: Common Ports & Protocols
+#+AUTHOR: Linux-DEX
+#+OPTIONS: toc:3
+#+CAPTION: My Image
+
+* TABLE OF CONTENT :toc:
+- [[#port][Port]]
+  - [[#port-ranges][Port Ranges]]
+- [[#well-known-default-ports][Well Known Default Ports]]
+- [[#file-transfer-protocol][File Transfer Protocol]]
+- [[#smtp-simple-mail-transfer-protocol][SMTP: Simple Mail Transfer Protocol]]
+- [[#pop-3-post-office-protocol][POP-3: Post Office Protocol]]
+- [[#imap4-internet-message-access-protocol][IMAP/4: Internet Message Access Protocol]]
+- [[#ntp-network-time-protocol][NTP: Network Time Protocol]]
+- [[#nntp-network-news-transfer-protocol][NNTP: Network News Transfer Protocol]]
+- [[#http-hyper-text-transfer-protocol][HTTP: Hyper Text Transfer Protocol]]
+- [[#https-hyper-text-transfer-protocol-over-ssl][HTTPS: Hyper Text Transfer Protocol over SSL]]
+- [[#rdp-remote-desktop-protocol][RDP: Remote Desktop Protocol]]
+
+* Port
++ A port is an process-specific or application-specific designation, serving as a communications endpoint in a computer's operating system.
++ Identifies Processes and Applications and the allowed communication paths they take in a network.
++ Ports range from 1 to 65,535. Port 0 is reserved and cannot be used.
+
+** Port Ranges
++ *Well Known Ports*- Range: 1-1023 | used by well-known, common services.
++ *Registered Ports*- Range: 1024-49,151 | Reserved by Applications and programs.
++ *Dynamic/Private Ports*- Range: 49,152- 65,535 | used by unregistered services and temporary connections.
+  
+* Well Known Default Ports
+ 
+| Port #: | Port Name:                                                                             |
+|---------+----------------------------------------------------------------------------------------|
+|       7 | ICMP Echo request (Ping)                                                               |
+|      20 | FTP (File Transfer Protocol) Default Data                                              |
+|      21 | FTP (File Transfer Protocol) Control                                                   |
+|      22 | SSH- Secure Shell                                                                      |
+|      23 | Telnet                                                                                 |
+|      25 | SMTP (Simple Mail Transfer Protocol)                                                   |
+|      53 | DNS (Domain Name Service)                                                              |
+|      67 | BootP(Bootstrap/Server) and DHCP(Dynamic Host Configuration Protocol)                  |
+|      68 | BootP(Bootstrap/Client) and DHCP(Dynamic Host Configuration Portocol)                  |
+|      69 | TFTP(Trivial File Transfer Protocol)                                                   |
+|     123 | NTP(Network Time Protocol)                                                             |
+|     110 | POP-3 (Port Office Protocol) 3                                                         |
+|     137 | Netbios Naming Service                                                                 |
+|     143 | IMAP/4 (Internet Message Access Protocol)                                              |
+|     161 | SNMP (Simple Network Management Protocol)                                              |
+|     389 | LDAP (Lightweight Directory Access Protocol)                                           |
+|     443 | HTTPS(Hyper Text Transfer Protocol Over Secure Socket Layer)                           |
+|     500 | IPSec (IP Security)/ISAKMP (Internet security association and key management protocol) |
+|    3389 | RDP (Remote Desktop Protocol)                                                          |
+|     119 | NNTP (Network News Transfer Protocol)                                                  |
+|      80 | HTTP (Hyper Text Transfer Protocol)                                                    |
+
+* File Transfer Protocol
++ FTP is a communications protocols used for transferring or exchanging files between two computers. 
++ These transferring of files generally is authenticated by username and password credentials.
+
+[[./img/ftp.png]]
+
++ *TFTP* (Trivial File transfer protocol)
+    - Simple version of FTP that does not support error correction.
+    - TFTP is a simple high-level protocol for transferring data servers use to boot diskless workstations, X-terminals, routers by using User Data Protocol(UDP)
++ Cmd prompt command to use FTP ftp (FQDN) (IP address of remote host)
++ FTP used port 20 or 21 by default.
+
+NOTE: FQDN - fully qualified domain name  
+
+* SMTP: Simple Mail Transfer Protocol
++ Used for *Outgoing* email.
++ Used over unreliable WAN links.
++ Default Port: 25 sometimes it use Port: 587
+  
+
+* POP-3: Post Office Protocol
++ The most commonly used protocol for receiving email over the internet.
++ is used to receive emails from the remote server and send to a local client.
++ After the client receive the emails it will delete it from the server.
++ Default Port: 110
+  
+NOTE:
+    - SMTP is a TCP/IP protocol used in sending and receiving e-mail.
+    - It is typically used with POP3 or internet Message access protocol to *save message in a server mailbox* and download them periodically from the server for the user.
+
+[[./img/SMTP.png]]
+
+* IMAP/4: Internet Message Access Protocol
++ Used for *Incoming email*.
++ More powerful than POP 3.
++ Easier mailbox management, more search capabilities, and allows partial downloading of multimedia files, saving bandwidth.
++ Default Port: 143
+  
+[[./img/IMAP.png]]
+  
++ allows a client to access and manipulate electronic mail message on a server.
++ IMAP doesn't download the email files from the server to the local device.
++ IMAP you can view the same email on multiple local devices.
+
+* NTP: Network Time Protocol
++ NTP is a protocol that allows the synchronization of system clocks (from desktops to servers).
++ NTP Master clock server.
++ Accurate up to the millisecond.
++ Default Port: 123
+
+* NNTP: Network News Transfer Protocol
++ Protocol for posting and retrieving of bulletin messages from USENET.
++ Transporting usenet news articles (netnews) between news servers, and for reading/posting articles by the end user client applications.
++ RSS feeds are based on NNTP.
++ default Port: 119
+
+* HTTP: Hyper Text Transfer Protocol
++ also called stateless protocol
++ Used for connecting with web servers and viewing and interacting with web pages.
++ For users to dynamically interact with web pages, add-ons may be needed as well.
++ Default Port: 80
+    - Common Alternative port: 8080
++ allows data to be transferred using the World Wide Web
+
+* HTTPS: Hyper Text Transfer Protocol over SSL
++ Secure version of HTTP
++ Uses SSL(Secure Sockets Layer) to encrypt data.
++ Preferred over HTTP and available on most web pages.
++ default port: 443
+  
+* RDP: Remote Desktop Protocol
++ Built into Microsoft Operating systems by default.
++ Allows users to remotely access data and network resources from another physical location.
++ Default port: 3389
+
+[[./img/RDP.png]]
+
+
+
+
+
+
+
+
+
+
+
+
+

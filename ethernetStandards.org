@@ -1,0 +1,252 @@
+#+TITLE: CompTIA Network+
+#+DESCRIPTION: Ethernet Standards
+#+AUTHOR: Linux-DEX
+#+OPTIONS: toc:3
+#+CAPTION: My Image
+
+* TABLE OF CONTENT :toc:
+- [[#what-is-ethernet][What is Ethernet]]
+- [[#history-of-ethernet][History of Ethernet]]
+- [[#why-the-name-ethernet][Why the name "Ethernet"?]]
+- [[#introduction-to-ethernet-standards][Introduction to Ethernet Standards]]
+- [[#ieee-standard-8023][IEEE Standard 802.3]]
+- [[#what-is-ieee][What is IEEE]]
+- [[#what-ieee-does][What IEEE does]]
+- [[#ieees-portfolio][IEEE's Portfolio]]
+- [[#ethernet-medium][Ethernet Medium]]
+- [[#baseband-and-broadband][Baseband and Broadband]]
+  - [[#broadband][Broadband]]
+  - [[#baseband][Baseband]]
+- [[#ethernet-naming-covention][Ethernet Naming Covention]]
+  - [[#naming-convention-examples][Naming Convention Examples]]
+- [[#10base5][10BASE5]]
+- [[#thicknet][Thicknet]]
+- [[#thinnet][Thinnet]]
+- [[#10base-t][10BASE-T]]
+- [[#100base-tx][100BASE-TX]]
+  - [[#popularity-of-100base-tx][Popularity of 100BASE-TX]]
+- [[#100base-fx][100BASE-FX]]
+- [[#1000base-t][1000BASE-T]]
+- [[#cat-5-cables][Cat 5 cables]]
+- [[#popular-gigabit-ethernet][Popular Gigabit Ethernet]]
+- [[#1000base-tx][1000BASE-TX]]
+- [[#10gbase-t][10GBASE-T]]
+- [[#10gbase-sr][10GBASE-SR]]
+- [[#10gbase-er][10GBASE-ER]]
+- [[#10gbase-sw][10GBASE-SW]]
+
+* What is Ethernet
++ First high-speed LAN technology that interconnected.
+    - Computers
+    - High-speed laser printers.
+[[./img/ethernet.png]]
+
+* History of Ethernet
++ Ethernet was invented by Bob Metcalfe in 1973.
++ A remarkable computing environment of that time because of the following:
+    - Computing was dominated by large and very expensive mainframe computer.
+    - Only a few people could afford to buy mainframe computers.
+    - Only a few people knew how to use them.
++ Bob Metcalfe changed the name of his first experimental network from  Alto Aloha Network to Ethernet.
+
+* Why the name "Ethernet"?
++ In Bob Metcalfe experimental network, the physical medium or the cable carried bits to all the computers.
++ To describe this important feature Bob Metcalfe named the network based on the word "Ether":
+    - The old "luminiferous aether" was once considered the medium for the propagation of electromagnetic waves.
+
+* Introduction to Ethernet Standards
++ Ethernet was first standardized by the consortium of DEC, Intel and Xerox or DIX.
+    - It was later standardized by the IEEE.
++ The standards define several aspects that make data transmission possible on the network.
++ The term Ethernet is used to refer both the original DIX Ethernet standard and the IEEE 802.3 specifications.
+
+* IEEE Standard 802.3
++ IEEE standard 802.3 is an international standard for LANs and MANs that employ the following.
+    - CSMA/CD as the shared media access method.
+    - Ethernet protocol and frame format for data communication.
+
+* What is IEEE
+IEEE stands for Institute of Electrical and Electronics Engineers.
+    - Largest professional association for the advancement of technology.
+    - Has more than 426,000 members in more than 160 countries.
+
+* What IEEE does
++ IEEE provides the following:
+    - Highly cited publications.
+    - Develops technology standards.
+    - Holds conferences to advance technological innovation and excellence.
+
+* IEEE's Portfolio
++ IEEE is a leading developer of international standards.
++ IEEE's portfolio of standards include the prominent IEEE 802 standards for the following:
+    - Local network.
+    - Metropolitan network.
+    - Other area networks, including Ethernet and Wireless LAN.
+
+* Ethernet Medium
++ The early Ethernet ran over coaxial cables.
++ The modern Ethernet networks use a mixture of copper and fiber-optic cabling.
+
+* Baseband and Broadband
+The term "band" refers to a range of frequencies, and the term "bandwidth", in the context of signal transmission, refers to the width of a band of frequencies.
+
+** Broadband
++ In a broadband system, the whole band of the transmission medium is shared by dividing it into pieces, called channels:
+    - Each channel will have the portion of the whole band.
+    - Multiple channels will serve as multiple signal carriers, each carraying its own data on the same transmission medium.
+
+** Baseband
++ In a baseband system, the entire band of the transmission medium will be used as a signal carrier.
+
+* Ethernet Naming Covention
+Ethernet standards use a naming convention that helps us determine the following:
+    + The transmission speed.
+    + Signaling type.
+    + Cable length.
+    + Cable type used.
+
+** Naming Convention Examples
++ For example, 10BASE5 is named for the following:
+    - 10 means that transmission speed is 10 Mbps.
+    - Base means the signaling type is baseband.
+    - 5 at the end indicates that the maximum length of a cable segment can be 500 meters.
+
++ Similarly, for 10BASE-TX, the following is true:
+    - 100 indicates a transmission speed of 100 Mbps.
+    - Base means the signaling type is baseband.
+    - T indicates that the standard is meant twisted-pair cabling.
+    - X at the end indicates that the cable is capable of full duplex communication.
+
+* 10BASE5 
++ The 10BASE5 is a physical layer specification of IEEE 802.3 that identifies the original Ethernet or the DIX Ethernet.
++ This Ethernet network used a thick coaxial cable as its physical medium.
++ Was referred to thicknet.
+
+* Thicknet
++ Thicknet ran at 10 Mbps
++ The type of thick coaxial cable used was as follows:
+    1. Either RG-8 or RG-11 with 50 ohm resistance.
+    2. The RG label stands for "Radio Government"
+        - Determines the type of coaxial cables.
++ The distance limitation of a cable segment was 500 meters.
+
+* Thinnet
++ Thinnet is based on the 10BASE2 specification of IEEE 802.3 standard.
++ Thinnet ran at 10 Mbps.
++ The type of thin coaxial cable used was as follows:
+    - RG-58 with 50 ohm resistance.
+    - Signaling type used is baseband.
++ The distance limitation of a cable segment is 185 meters.
+    - represented by "2" in 10BASE-2
++ Being cheaper than thicknet, it was called "Cheapernet"
+
+* 10BASE-T
++ 10BASE-T standard was introduced in 1990.
++ 10BASE-T is a physical layer specification of IEEE 802.3 standard for Ethernet network:
+    1. Ran at 10 Mbps over two pairs of twisted-pair telephone wire.
+    2. Allowed networks to use the existing telephone cabling:
+        - Easy installations and reduced cost.
++ The "T" in 10BASE-T denotes twisted-pair wires.
++ Twisted pair cable for 10BASE-T is category 3 (Cat 3) cable.
++ Higher category cables can also be used with the 10BASE-T Ethernet:
+    - Example: Cat 5, Cat 5e, Cat 6, and Cat6a
+    - Higher categories of UTP cables have higher specifications.
+    - Can handle higher data transmission speeds.
++ 10BASE-T supports maximum cable length of 100 meters.
+
+* 100BASE-TX
++ 100BASE-TX is the physical layer specification of IEEE 802.3 standard for Ethernet network:
+    - Runs at 100 Mbps over two pairs of Category 5 twisted-pair cabling
++ The maximum length of the cable segment is 100 meters.
++ 100BASE-TX is called as Fast Ethernet:
+    - Operates at 100 Mbps.
+    - Faster than 10BASE-T
+
+** Popularity of 100BASE-TX
++ Because widely used because of it compatibility with the 10BASE-T standard
+    - 10BASE-T Ethernet networks utilized Category 5 cables.
+    - A lot easier to upgrade the existing network to operate at 100 Mbps by making a few changes.
+
+* 100BASE-FX
++ Modern Ethernet networks also use fiber-optic cabling.
++ The fiber standard for 100 Mbps Ethernet network is 100BASE-FX.
++ 100BASE-FX is an IEEE 802.3u specification:
+    1. 100 Mbps Ethernet network over two multimode optical fibers.
+    2. Two multimode optical fibers:
+        - One is used for the transmitter.
+        - The other is used for the receiver.
++ 100BASE-FX supports a maximum cable length of the following:
+    - 400 meters in half-duplex mode.
+    - 2 kilometers in full-duplex mode.
++ Half-duplex mode:
+    - A device can either send or receive data at a given time but not both
++ Full-duplex mode:
+    - A device can send and receive data at the same time.
+
+* 1000BASE-T
++ Runs 10 times faster than the 100BASE-TX Ethernet networks.
++ 1000BASE-T is an IEEE 802.3ab specification:
+    - 1000 Mb/s Ethernet network over four pairs of category 5 or better.
+    - Supports a maximum cable length of 100 meters.
++ 1000BASE-T operates at 1000 Mbps - Gigabit Ethernet
++ Easy to install:
+    - Designed to run on Cat 5 UTP cables.
+    - Cat 5 UTP cables are inexpensive and commonly available.
+
+* Cat 5 cables
++ Cat 5 cables have four pairs of twisted pair wires.
++ 10BASE-T and 100BASE-T Ethernet uses only two pairs of Cat 5.
++ 1000BASE-T uses all the four pair of Cat 5.
+
+* Popular Gigabit Ethernet
++ 1000BASE-T is the most widely used version of Gigabit Ethernet.
++ 802.3 standard also specifies other versions of Gigabit Ethernet.
+    1. 1000BASE-CX
+        - Implemented over balanced shield twisted pair cabling.
+        - Supports a maximum cable length of 25 meters.
+    2. 1000BASE-LX
+        - Implemented over either multimode or single-mode fiber-optic cabling.
+        - Maximum cable length:
+            - single-mode fiber: 5 Km
+            - Multimode fiber: 550 m
+    3. 1000BASE-SX
+        - Implemented over multimode fiber-optic cabling.
+        - Supports a maximum cable length of 550 meters.
+
+* 1000BASE-TX
++ Gigabit Ethernet over Category 6 cabling.
++ Supports a maximum cable length of 100 meters.
++ uses only two pairs of wires for data transmission.
++ 1000BASE-TX Ethernet was a commercial failure:
+    - Falling cost of 1000BASE-T.
+    - Requirement of Cat 6 UTP cables.
+
+* 10GBASE-T
++ 10 times faster than the 1000Base-T Ethernet:
+    - Operates at 10 Gbps
++ 10GBASE-T is an IEEE 802.3an specification;
+    - 10 Gbps LAN using four pairs of Category 6A or higher.
+    - Supports a maximum cable distance of 100 meters.
++ Category 6A:
+    - An augmented version of Category 6
+    - Frequency performance rated at 500 MHz
+
+* 10GBASE-SR
++ 10 Gigabit Ethernet of fiber-optic cables
++ 10GBASE-SR is an IEEE 802.3ae specification:
+    - 10 Gigabit Ethernet over multimode fiber-optic cabling.
+    - SR in 10GBASE-SR stands for "Short Range"
+    - Supports a maximum cable length of 300 meters.
+
+* 10GBASE-ER
++ 10 Gigabit Ethernet over long distances.
++ 10GBASE-ER is an IEEE 802.3ae specification
+    - Gigabit Ethernet over single-mode fiber-optic cabling.
+    - "ER" in 10GBASE-ER stands for "Extended Range".
+
+* 10GBASE-SW
++ Designed for transmission over WANs using SONET/SDH technology.
++ 10GBASE-SW is an IEEE 802.3ae specification:
+    - Implemented at 10 Gbps over multimode fiber
+
+

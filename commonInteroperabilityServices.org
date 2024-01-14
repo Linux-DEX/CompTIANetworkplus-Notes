@@ -1,0 +1,69 @@
+#+TITLE: CompTIA Network+
+#+DESCRIPTION: Common Interoperability Services
+#+AUTHOR: Linux-DEX
+#+OPTIONS: toc:3
+#+CAPTION: My Image
+
+* TABLE OF CONTENT :toc:
+- [[#interoperability-services][Interoperability Services]]
+- [[#nfs-network-file-system][NFS: Network File System]]
+- [[#ssh-secure-shell][SSH: Secure Shell]]
+- [[#scp-secure-copy][SCP: Secure Copy]]
+- [[#telnet][Telnet]]
+- [[#smb-server-message-block][SMB: Server Message Block]]
+- [[#ldap-lightweight-directory-access-protocol][LDAP: Lightweight Directory Access Protocol]]
+- [[#zeroconf][Zeroconf]]
+
+* Interoperability Services
++ Just as TCP/IP contains various protocols, it also contains Interoperability Services.
+  [[./img/pc-mac.png]]
++ These Services allow for computers to share resources securely and efficiently, even when they are completely different from one another.
+
+* NFS: Network File System
++ Application that allows users to access remote network files and resources.
++ Used for systems that are dissimilar, such as Unix and Microsoft Systems.
++ Functions independently of the Operating system, network architecture, or computer system it is installed on.
++ Listens on port 2049 by default.
+
+* SSH: Secure Shell
++ A very secure method to access a computer and resources remotely.
++ Creates a secure session, or shell with the remote machine by using authentication mechanisms.
++ Works with many systems including Unix, Microsoft, Linux, and Macintosh.
++ Port 22 by default.
+
+* SCP: Secure Copy
++ A secure method of copying files from one device to another remotely.
++ Works with many systems including Unix, Microsoft, Linux, and Macintosh.
++ Also uses port 22 by default.
+  
+* Telnet
++ Terminal emulation protocol that allows users at one site to simulate a session on a remote machine.
++ uses port 23 by default.
+
+[[./img/telnet.png]]
+
+* SMB: Server Message Block
++ Also known as CIFS or common Internet File system.
++ Used for providing communications to nodes on a network, access to files and peripheral devices and ports.
++ Most well known for accessing file systems or printers on shared networks or from the server.
++ Port 445 by default.
+
+* LDAP: Lightweight Directory Access Protocol
++ Main purpose is for accessing and maintaining distributed directory information services, in an IP network.
++ Used for managing directory information and tasking in networks that contain user, object or other kinds of directories.
++ "Lightweight" because it is not as network intensive as its predecessor DAP.
++ Port 389 by default
++ relies heavily on DNS.
++ microsoft and active directory sevice, NDS and apple open directory all use LDAP.
+
+* Zeroconf
+A set of technologies allowing network devices on a local network(such as home or small office) to *automatically configure themselves*.
++ It generally uses *MAC address*.
+
++ Four function for zeroconf
+    - Network address assignment must be automatic.
+    - Automatic multicast address assignment.
+    - Automatic translation between network names and addresses.
+    - Discovery of network services, or the location, by the protocol and the name is required.
+
+

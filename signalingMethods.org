@@ -13,6 +13,10 @@
 - [[#digital-data-transmission-encoding-schemes][Digital Data Transmission Encoding Schemes]]
   - [[#on-off-keying][On-Off keying]]
   - [[#manchester-encoding][Manchester Encoding]]
+- [[#modulation][Modulation]]
+  - [[#digital-modulation-and-demodulation][Digital Modulation and Demodulation]]
+  - [[#digital-signal-reference-methods][Digital Signal Reference Methods]]
+  - [[#unit-measurements-of-digital-data][Unit Measurements of Digital Data]]
 
 * Definition
 ** Signal
@@ -40,8 +44,95 @@ A signal that carries data in a continuous stream or waveform via either electro
 * Digital Data Transmission Encoding Schemes
 ** On-Off keying
 *** NRZ- Non-Return To Zero variation
++ NRZ codes has 1 for high voltage level and 0 for low voltage level.
++ The main behavior of NRZ codes is that the voltage level remains constant during bit interval.
++ The end or start of a bit will not be indicated and it will maintain the same voltage state, if the value of the previous bit and the value of the present bit are same.
+
+[[./img/NRZ.png]]
+
 *** NRZI- Non-Return To Zero Inverted variation
++ 1 bit is indicated by making a change in the signal from the previous bit, and a 0 bit is indicated by making no change.
++ A method of mapping a binary signal to a physical signal for transmission over some transmission medium.
+
+[[./img/NRZI.png]]
 
 ** Manchester Encoding
++ Commonly known as phase encoding.
++ A line code used in communication and data storage in which each data bit is encoded either high then low, or low than high for an equal period of time.
+
+*** Overcomes downfalls of On-Off keying
+*** Used over Faster Ethernet Connections
+
+* Modulation
++ The process of converting data into radio waves by adding information to an electronic or optical carrier signal.
++ Weaker, lower frequency signals are superimposed over stronger, higher frequency signals.
++ Increase the range of transmission and decreases signal degradation.
++ *Modulation is the process of encoding information in a transmitted signal, while demodulation is the process of extracting information from the transmittion signal*.
+
++ *Modem* - is a device that converts data from digital computer signals to analog signals that can be sent over a phone line. This is called modulation. The analog signals are then converted back into digital data by the receiving modem. This is called demodulation.
++ *Codec* - short for "coder-decoder" is a device or software that compresses and decompresses digital data. codecs are commonly used in the field of multimedia, such as audio and video, to reduce file sizees for transmission or storage.
+  - DAC - Digital to analog codec.
+  - ADC - Analog to digital codec.
+
+** Digital Modulation and Demodulation
++ Digital modulation is the translation of digital data into analog format for *transmission over long distances*.
+
+[[./img/dmd.png]]
+
++ As digital signals only have two states, 1 and 0, the characteristics of the analog waveform only need to be modulated in one way, such as frequency to represent the two states.
+
+[[./img/digitalModulation.png]]
+
+*** Modulation Techniques;
+| slno | Modulation Technique          | Description             | Logical State         |
+|------+-------------------------------+-------------------------+-----------------------|
+|    1 | ASK - Amplitude Shift key     | Amplitude of wave is    | 1 or 0 only           |
+|      | Modulation                    | modulated               |                       |
+|    2 | FSK - Frequency shift key     | Frequency of wave is    | 1 or 0 only           |
+|      | Modulation                    | modulated               |                       |
+|    3 | BPSK - Binary-Phase Shift     | The phase of the wave   | 1 or 0 only           |
+|      | key Modulation                | is changed              |                       |
+|    4 | QPSK - Quadrature Phase Shift | Phase changed. 2 states | 2 states at a time:   |
+|      | Key Modulation                | represented at a time   | 00, 01, 10, or 11     |
+|    5 | QAM - Quadrature Amplitude    | Phase and amplitude     | More than 2 states at |
+|      | Modulation                    | modulation combined.    | a time.               |
+
+** Digital Signal Reference Methods
+*** Differential 
+Modulated and Demodulated signals are compared and the output then becomes the data.
+[[./img/diff-dsrm.png]]
+
+*** Single Ended
+The signal is compared on one line to ground. The end result becomes the data.
+[[./img/single-ended.png]]
+
+** Unit Measurements of Digital Data
+0 or 1 = 1 bit
+2 bits = A crumb
+4 bits = A nibble
+8 bits = 1 byte
+For a 16-bit processor a word = 16 bits
+For a 32-bit processor a word = 32 bits
+For a 64-bit processor a word = 64 bits
+
+[[./img/unitMeasure.png]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

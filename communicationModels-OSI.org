@@ -1,0 +1,28 @@
+#+TITLE: CompTIA Network+
+#+DESCRIPTION: Communication Models - OSI
+#+AUTHOR: Linux-DEX
+#+OPTIONS: toc:3
+#+CAPTION: My Image
+
+* TABLE OF CONTENT :toc:
+- [[#osi][OSI]]
+- [[#layer-1-physical][Layer 1: Physical]]
+
+* OSI
++ A conceptual model created by the international Organization for standardization which enables diverse communication systems to communicate using standard protocols.
++ The purpose of the OSI reference model is to guide technology vendors and developers so the digital communications products and software programs they create can interoperate and to promote a clear framework that describes the functions of a networking or telecommunications system that's in use.
+
+  [[./img/OSI.png]]
+
+* Layer 1: Physical
+
+
+
+
+
+
+
+
+
+
+5:46:16
