@@ -1,0 +1,161 @@
+#+TITLE: CompTIA Network+
+#+DESCRIPTION: Ethernet & Implementating a wireless Network
+#+AUTHOR: Linux-DEX
+#+OPTIONS: toc:3
+#+CAPTION: My Image
+
+* TABLE OF CONTENT :toc:
+- [[#ethernet-network-types][Ethernet Network Types]]
+  - [[#hub][Hub]]
+  - [[#ethernet-crossover-cable][Ethernet Crossover cable]]
+  - [[#router][Router]]
+  - [[#sap][SAP]]
+- [[#wlan-architecture][WLAN Architecture]]
+- [[#wlan-configuration][WLAN Configuration]]
+  - [[#bss-basic-service-set][BSS: Basic Service Set]]
+  - [[#ess-extended-service-set][ESS: Extended Service Set]]
+  - [[#ibss-independent-basic-service-set][IBSS: Independent Basic Service Set]]
+- [[#wireless-antennas][Wireless Antennas]]
+  - [[#antenna][Antenna]]
+  - [[#gain][Gain]]
+- [[#wireless-antenna-types][Wireless Antenna types]]
+  - [[#directional][Directional]]
+  - [[#omni-directional][Omni-Directional]]
+- [[#wireless-antenna-performance-factors][Wireless Antenna Performance Factors]]
+  - [[#infrared-data-transmission][Infrared Data Transmission]]
+  - [[#microwave-transmission][Microwave Transmission]]
+  - [[#radio-transmission][Radio Transmission]]
+  - [[#bluetooth-transmission][Bluetooth transmission]]
+  - [[#latency][Latency]]
+- [[#ieee-80211][IEEE 802.11]]
+- [[#beacon-frame][Beacon Frame]]
+- [[#wap-placement-and-wireless-network-implementation][WAP Placement and wireless Network implementation]]
+
+* Ethernet Network Types
+** Hub
++ A Hub is a basic networking device tha operates at the physical layer =(Layer 1)= of the OSI model.
++ It serves as a central connection point for multiple network devices, allowing them to communicate with each other with each other within the same network segment.
+  
+[[./img/hub-network.png]]
+ 
+** Ethernet Crossover cable 
++ An Ethernet crossover cable is a type of Ethernet cable that allows for direct communication between two network devices of the same type, such as two computers or two switches, without the need for an intermediary device like a hub or a switch.
+
+[[./img/ethernetCrossoverCable.png]]
+
+** Router
++ A router in an Ethernet network is a networking device that facilitates the exchange of data packets between different networks.
+
+[[./img/routerEthernet.png]]
+
+** SAP
++ SAP ( Service Access Point ).
++ SAP is a reference point within a communication network where services are offered or accessed.
++ Maps the network layer communication through the physical layer.
+
+* WLAN Architecture
++ *STA : Station* - Station consist of all the equipment that is used to connect all wireless LANs. Each station has a wireless network controller.
++ *Access Point(AP)* : is a networking device that serves as a central connection point for wireless client to connect to the wired network infrastructure.
++ *Wireless Distribution System(WDS)* : Technology used in WLAN architecture to extend wireless coverage and create a wireless network infrastructure that spans multiple access points(APs) or wireless routers.
+
+* WLAN Configuration
+** BSS: Basic Service Set
++ All device is communicate through wireless.
++ BSS contains only one AP that is connected to all stations.
++ AP is a common access point that acts as a medium and creates a WLAN.
++ AP is considered a master that controls all wireless device or stations with BSS
+
+[[./img/bss.png]]
+
+** ESS: Extended Service Set
++ WLAN architecture to describe a network configuration where multiple Access Points(APs) are interconnected to provide extended wireless coverage and seamless roaming for wireless clients.
++ Maintains connectivity while moving between BSS.
+
+[[./img/ess.png]]
+
+** IBSS: Independent Basic Service Set
++ It is a service set that allows wireless devices or stations to communicate with each other without any medium or central device.
++ It does not contain or include any AP. That's why it is also known as an ad hoc mode or peer to peer network.
++ Peer to peer network, simply means two to more devices or stations or PCs connected to each other directly and share resources without any separate server computer.
+
+[[./img/ibss.png]]
+
+* Wireless Antennas
+** Antenna
+An antenna is a specialized device used in wireless communication systems to transmit and receive electromagnetic signals.
+
+** Gain
++ gain refers to the ability of an antenna to focus or concentrate eletromagnetic energy in a specific direction compared to an isotropic radiator.
++ Gain is a measure of the antenna's ability to increase signal strength in particular direction, either for transmitting or receiving electromagnetic waves.
+  
+* Wireless Antenna types
+** Directional
++ Focus electromagnetic energy in a specific direction, providing increased range, coverage and signal strength in that direction while reducing interference from other directions.
+
+[[./img/directional-antena.png]]
+
+** Omni-Directional
++ Antenna designed to radiate or receive electromagnetic waves uniformly in all directions, creating a 360-degree coverage pattern
+
+[[./img/omni-drectional-antena.png]]
+
+* Wireless Antenna Performance Factors
+** Infrared Data Transmission
++ Direct LOS Needed.
++ Smoke, Smog, Fog, Dust
++ Object / Bright Sunlight
+
+** Microwave Transmission
++ Also Line of Sight
++ Distance Between Stations
+
+** Radio Transmission
++ Antenna Characteristics
++ Conductive Objects
++ Nearby Electrical Equipment
+
+** Bluetooth transmission
++ Distance Between Devices
++ Power Limitations
++ Devices On Same Frequency
+
+** Latency
++ Latency is the measured time delay in a given system.
++ Most concerned with network latency one-way or round trip
+  
+* IEEE 802.11
+CSMA/CA or Carrier Sense Multiple Access, with Collision Avoidance 2.4Ghz frequency for spread spectrum devices.
+
++ *802.11-1997* : 2.4Ghz frequency band and was rated for data rates of up to 2Mbit/s.
++ *802.11a*     : Operates at the 5Ghz band and is capable of up to 54Mbit/s data rates.
++ *802.11b*     : Standard operates at the 2.4Ghz band and data rates up to 11Mbit/s.
++ *802.11g*     : Also used the 2.4Ghz frequency band, with data rates up to 54Mbit/s. Compatible with 802.11b.
++ *802.11n*     : First one with MIMO- use both the 2.4Ghz and the 5Ghz bands and up to 150Mbit/s.
+
+* Beacon Frame
++ 50 bytes long
++ SSID = 32 bytes long - identifies the network
++ Contains: SSID and other transmission process information.
++ Used to start and maintain the wireless communication session.
++ Sent in regular time intervals that can be altered.
+
+[[./img/beacon-frame.png]]
+
+* WAP Placement and wireless Network implementation
++ Collect Information(Floor plan, Diagrams)
++ Outline Requirements(Users, Security, Standards)
++ Plan and Design
++ Floor Assessment(Interference check)
++ Determine Placement
++ Device Installation
+    - Connect to router(Wired Network)
+    - Change Default Settings
+    - Configure: Services, Encryption, Channel, ACL
++ Configure Client Computer and Test
++ Document.
+  
+NOTE: first 5 step is Planning Phase, and last 3 step are installation phase
+
+
+
+

@@ -6,7 +6,13 @@
 
 * TABLE OF CONTENT :toc:
 - [[#osi][OSI]]
-- [[#layer-1-physical][Layer 1: Physical]]
+- [[#physical-layer---layer-1][Physical Layer - Layer 1]]
+- [[#data-link-layer-dll---layer-2][Data Link Layer (DLL) - Layer 2]]
+- [[#network-layer---layer-3][Network Layer - Layer 3]]
+- [[#transport-layer---layer-4][Transport Layer - Layer 4]]
+- [[#session-layer---layer-5][Session Layer - Layer 5]]
+- [[#presentation-layer---layer-6][Presentation Layer - Layer 6]]
+- [[#application-layer---layer-7][Application Layer - Layer 7]]
 
 * OSI
 + A conceptual model created by the international Organization for standardization which enables diverse communication systems to communicate using standard protocols.
@@ -14,15 +20,44 @@
 
   [[./img/OSI.png]]
 
-* Layer 1: Physical
+* Physical Layer - Layer 1
++ The lowest layer of the OSI reference model is the physical layer. It is reponsible for the actual physical connection between the devices.
++ The physical layer contains information in the form of *bits*.
++ It is responsible for transmitting individual bit from one node to the next. 
++ When receiving data, this layer will get the signal received and convert it into 0s and 1s send them to the data link layer, which will put the frame back together.
++ Hub, Repeater, Modem, and cables are Physical Layer devices.
+
+* Data Link Layer (DLL) - Layer 2
++ The data link layer is responsible for the node-to-node delivery of the message. 
++ The main function of this layer is to make sure data transfer is error-free from one node to another, over the physical layer.
++ When a packet arrives in a network, it is the responsibility to the DLL to transmit it to the Host using its MAC address.
++ The data link layer is divided into two sublayers:
+    - Logical Link Control (LIC)
+    - Media Access Control (MAC)
+
+* Network Layer - Layer 3
++ The network layer works for the transmission of data from one host to the other located in different networks.
++ It also takes care of packet routing i.e. selection of the shortest path to transmit the packet, from the number of routes available. 
++ The sender & receiver's IP addresses are placed in the header by the network layer.
+
+* Transport Layer - Layer 4
++ The transport layer provides services to the application layer and takes services from the network layer.
++ The data in the transport layer is referred to as /Segments/.
++ It is responsible for the End to End delivery of the complete message. 
++ The transport layer also provides the acknowledgment of the sucessful data transmission and re-transmits the data if an error is found.
++ *At the sender's side*: The transport layer receives the formatted data from the upper layers, performs *Segmentation*, and also implements *flow & Error control* to ensure proper data tramsmission.
+
+* Session Layer - Layer 5
++ This layer is responsible for the establishment of connection, maintenance of sessions, and authentication, and also ensure security.
++ Device or Protocol use: NetBIOS, PPTP.
+
+* Presentation Layer - Layer 6
++ The presentation layer is also called the *Translation layer*.
++ The data from the application layer is extracted here and manipulated as per the required format to transmit over the network.
+
+* Application Layer - Layer 7
++ At the very top of the OSI Reference Model stack of layers, we find the application layer which is implemented by the network applications.
++ These applications produce the data, which has to be transferred over the network.
++ This layer also serves as a window for the application services to access the network and for displaying the received information to the user.
 
 
-
-
-
-
-
-
-
-
-5:46:16

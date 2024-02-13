@@ -1,0 +1,107 @@
+#+TITLE: CompTIA Network+
+#+DESCRIPTION: Network Segmentation
+#+AUTHOR: Linux-DEX
+#+OPTIONS: toc:3
+#+CAPTION: My Image
+
+* TABLE OF CONTENT :toc:
+- [[#network-segmentation][Network Segmentation]]
+  - [[#physical-segmentation][Physical Segmentation]]
+  - [[#logical-segmentation][Logical Segmentation]]
+- [[#resons-to-use-network-segmentation][Resons to use Network Segmentation]]
+- [[#network-segmentation-critical-situation][Network Segmentation Critical Situation]]
+
+* Network Segmentation
++ Concerns dividing a computer network into sub networks.
++ Each of divided network is called a network segment.
++ Each network segment is characterized by the following:
+    - Physical boundary
+    - Logical boundary
++ A physical or logical boundary separates each network segment from others.
++ /Though network segments are isolated, a secure communication can be established between them to share network resources./
+
+** Physical Segmentation
++ A Computer network is physically divided into network segments using the following:
+    - Switches
+    - Routers
++ A group of physical assests is part of a specific network segment.
+
+** Logical Segmentation
++ A computer network is virtually divided into network segments:
+    - For example, a computer network can be virtually segmented into virtual LANs or VLANs.
++ Virtual segmentation is done on different connections of the same physical switch:
+    - It can have multiple VLANs.
+
+* Resons to use Network Segmentation
+Network Segmentation can be done for many reasons:
++ To enhance the security of a network.
++ To isolate critical infrastructure to prevent unauthorized access:
+    - For example, to restrict access, a server can be placed in a network segment so that user's don't have direct access to it.
++ Network segmentation can be used for reducing network congestion:
+    - A single department may have more network traffic than others.
+    - We can segment the network by department to limit the traffic to each individual segment.
+    - By restricting the traffic, we can increase the available bandwidth of the network.
++ Network segments are created for load-balancing purposes.
+    - To distribute the traffic load on a network:
+        - Users can have the devices placed in different network segments.
++ Network segmentation is done for PCI(Payment Card Industry) compliance:
+    - PCI compliance standards were created by major credit card issuers.
+    - To ensure that the payment transaction are done in a secure environment.
++ If someone processes, stores, or transmits credit card information, it must comply with the PCI Data Security Standard(DSS).
++ PCI DSS is mandated by Visa MasterCard, American Express, Discover, and JCB.
++ Network Segmentation is not a PCI DSS requirement:
+    - It is done to isolate the network that stores, processes, or transmit cardholder information from the rest of the network.
+    - Network segmentation reduces the scope of the network environment subject to PCI compliance.
++ The footprint of sensitive information is confined to a network segment:
+    - Its boundary that comes into contact with the public or unstrusted network can be protected using the following for PCI compliance:
+        - Firewall.
+        - Intrusion detection systems
++ Segmenting the network reduces audit costs as a result of the following:
+    - The audit is done for a specific network segment instead of focusing on the entire network.
+    - It simplifies the maintenance because maintenance is time-consuming and difficult when the network is larger.
+
+* Network Segmentation Critical Situation 
++ There are numerous situations where network segmentation is critical.
++ SCADA(Supervisory Control and Data Acquistion) and ICS(Industrial Control Systems) networks:
+    - ICS refers to several control systems that used in industries.
+    - SCADA is an industrial control system.
++ Industrial facilites are electrical power grids, water distribution system, and oil and natural gas pipeline system.
++ They are very much dependent on electrical, hydraulic , and mechanical equipment.
++ This equipment is monitored by sensors that transform physical stimulus into an electrical signal.
++ In a basic SCADA system, when industrial operations are performed, information from sensors is sent to controllers.
++ A controller is a type of computer that receives information from sensors.
++ A controller sends that information to computers with SCADA software.
++ SCADA systems help monitor, interact with, and control a variety of equipment.
++ To prevent outside attacks:
+    - SCADA systems are segmented from the rest of the network and have firewalls installed.
++ Old and outdated computer systems are often referred to as legacy system.
+    - There systems may still be running applications critical to business and cannot be take out of service.
+    - They are more vulnerable to attacks because of a lack of security patches.
+    - It is important to segment them from the rest of the network.
++ When there are servers in a network for public access:
+    - we would restrict access to only those public servers.
+    - We do not restrict access to the internal network.
++ It will segment the network in a the following ways:
+    - The servers and resources used by employees are on a private network.
+    - Public servers are on a public network for anybody to access.
++ If a private network is restricted only to employees:
+    - It is less prone to outside attacks.
++ In a public network, even if a server is compromised:
+    - It won't affect a private network because of the isolation of two network segments
++ Testing of patches and updates for our applications should be carried in a test environment instead of production environment because of the following:
+    - A test activity may result in an unintended outage.
+    - any outage in a production environment will not only result in revenue loss, it will also affect the credibility of the business.
+
++ A "Honey Pot" is a decoy server setup to lure attackers:
+    - To study their attacks
+    - To gather forensic information required to prosecute the attackers.
++ A "Honey Pot System" is designed to be more easily exploited than a real production server.
+    - Easily attacts the attackers.
+    - Has attackers activities logged to gain insight into their attacking techniques.
++ A "Honey Net" is a network segment that contains more than one honey pot.
++ For an attacker, a Honey Net should look like a normal network:
+    - It will make the attacker spend sufficient time exploiting the system.
+    - It will provide us with the much needed attacking techniques and forensic information.
+
+
+

@@ -1,0 +1,72 @@
+#+TITLE: CompTIA Network+
+#+DESCRIPTION: Communication Models - TCP
+#+AUTHOR: Linux-DEX
+#+OPTIONS: toc:3
+#+CAPTION: My Image
+
+* TABLE OF CONTENT :toc:
+- [[#tcpip-model][TCP/IP Model]]
+- [[#differences-between-osi--tcpip-model][Differences between OSI & TCP/IP Model]]
+- [[#function-of-tcpip-model][Function of TCP/IP Model]]
+  - [[#mac-address][MAC Address]]
+  - [[#ethernet-frame][Ethernet Frame]]
+- [[#protocol-binding][Protocol Binding]]
+
+* TCP/IP Model
++ TCP/IP was designed and developed by the Department of Defense(DoD) in the 1960s and is based on standard protocols.
++ It stands for *Transmission Control Protocol/Internet Protocol*.
++ The TCP/IP model is a concise version of the OSI model. It contains four layers, unlike the seven layers in the OSI model.
+  
+[[./img/tcp-ip-model.png]]
+
+* Differences between OSI & TCP/IP Model
+
+| OSI Model                                          | TCP/IP Model                                              |
+|----------------------------------------------------+-----------------------------------------------------------|
+| It has 7 layers                                    | It has 4 layers                                           |
+| it is low in usage                                 | It is mostly used.                                        |
+| It is vertically approached                        | It is horizontally approached.                            |
+| Delivery of the package is guaranteed is OSI Model | Delivery of the package is not guaranteed in TCP/IP model |
+| It is less reliable than TCP/IP model              | It is more reliable than OSI model.                       |
+
+* Function of TCP/IP Model
++ *Application Layer* : This layer interacts with end-user applications. It provides protocols for tasks such as email(SMTP), file transfer(FTP), web browsing(HTTP), and remote access(SSH). It's where data is formatted, processed, and presented to the user.
+
++ *Transport Layer* : The transport layer ensures reliable communication between hosts. It provides two main protocols: Transmission Control Protocol(TCP) and User Datagram Protocol (UDP). TCP ensures reliable, ordered, and error-checked delivery of data, while UDP provides a connectionless and unreliable transport mechanism suitable for real-time applications.
+
++ *Internet Layer* : The Internet layer is responsible for routing packets between networks. It provides the Internet Protocol (IP), which enables hosts to deliver packets to each other across interconnected networks. IP addresses and routing tables are managed at this layer.
+  
++ *Network Layer* : The link layer is responsible for transferring data between adjacent network nodes within the same network. It handles issues such as physical addressing (MAC addresses), error detection and correction, and flow control. Ethernet and Wi-Fi are examples of link-layer protocols.
+
+[[./img/tcp-ip-encapsulation.png]]
+
+** MAC Address
++ To communicate or transfer data from one computer to another, we need an address. In computer networks, various type of addresses are introduced each works at a different layer.
++ A MAC (Media Access Control) address, also known as a hardware address or physical address, is a unique identifier assigned to network interface for communications at the data link layer of the OSI model.
++ Unique *48-bit* hardware numbers of a computer that are embedded into a network card.
+
+[[./img/MAC-a.png]]
+
+** Ethernet Frame
++ The IEEE 802.3 standard defines the fundamental frame format that is necessary for all MAC implementations. However, the core functionality of the protocol is being extended by several optional forms.
++ Preamble and SFD, which operate at the physical layer, begin an Ethernet frame. The packet's payload follows the Ethernet header, which includes the MAC addresses for the source and destination.
+
+[[./img/ethernet-frame.png]]
+
+1. *Preamble* : A sequence of alternating 1s and 0s (101010...) used for synchronization and to alert receiving devices of an incoming frame.
+2. *Start Frame Delimiter(SFD)* : A unique pattern indicating the start of the frame and allowing receivers to synchronize with the incoming data.
+3. *Destination MAC Address* : A 6-byte (48-bit) field indicating the MAC address of the intended recipient of the frame.
+4. *Source MAC Address* : A 6-byte (48-bit) field indicating the MAC address of the sender of the frame.
+5. *Type/Length* : A 2-byte field indicating either the length of the data payload or the type of the protocol encapsulated within the frame.
+6. *Data Payload* : The actual data to be transmitted, which can vary in length from 46 to 1500 bytes (or more for jumbo frames).
+7. *Frame Check Sequence(FCS)* : A 4-byte (32-bit) field containing a checksum or cyclic redundancy check (CRC) value used for error detection. It allows the receiving device to verify the integrity of the received frame.
+8. *Interframe Gap(IFG)* : A brief period of silence between frames to ensure proper separation and timing between consecutive transmissions.
+
+* Protocol Binding
++ Can bind multiple protocols to one NIC.
++ The protocols are tested in order for an available connection.
++ This is the graphical interface to configure IP addresses and other critical network settings.
+
+
+
+
