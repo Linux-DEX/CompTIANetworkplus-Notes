@@ -118,6 +118,17 @@ The video course predates the current exam (N10-009). These notes are the object
 | 12.4 | [Recovery, DNS security, management](notes/12.0-n10-009/12.4-recovery-dns-and-management.md) | |
 | 12.5 | [Installation, wireless details, hardening](notes/12.0-n10-009/12.5-install-wireless-and-hardening.md) | |
 
+## 13.0 Current practice
+
+Newer than the N10-009 objectives. Read these after 12.0.
+
+| | Note | Cheat sheet |
+|---|---|---|
+| 13.1 | [QUIC, HTTP/3, MACsec](notes/13.0-current-practice/13.1-quic-and-macsec.md) | [13.0 sheet](cheat-sheets/13.0-current-practice.md) |
+| 13.2 | [EVPN, BFD, microsegmentation](notes/13.0-current-practice/13.2-evpn-bfd-microsegmentation.md) | |
+| 13.3 | [Automation, RPKI, ZTNA](notes/13.0-current-practice/13.3-automation-rpki-ztna.md) | |
+| 13.4 | [Wireless, IoT, and OT](notes/13.0-current-practice/13.4-wireless-iot-and-ot.md) | |
+
 ## How to review
 
-Read the numbered note once. After that, drill the matching cheat sheet. If a line on the sheet is not obvious, go back to that number. TCP is 4.2. Subnetting is 6.1. The current exam's newer topics are 12.0. The video times are in the syllabus.
+Read the numbered note once. After that, drill the matching cheat sheet. If a line on the sheet is not obvious, go back to that number. TCP is 4.2. Subnetting is 6.1. The current exam's newer topics are 12.0. Practice past the exam is 13.0. The video times are in the syllabus.
