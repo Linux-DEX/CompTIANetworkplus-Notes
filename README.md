@@ -2,7 +2,7 @@
 
 Study notes from [Paul Browning's Network+ course](https://www.youtube.com/watch?v=xmpYfyNmWbw), rewritten into numbered sections. The [video syllabus](notes/00-video-syllabus.md) maps each module to a note and, where the chapter time is known, jumps to that point in the video.
 
-Each note is the long version. Each cheat sheet is the same material in one-liners for review. Diagrams stay in `img/`.
+Each note is the long version. Each cheat sheet is the same material in one-liners for review. Diagrams stay in `img/`. Commands and how to run them are in [tools](tools/README.md).
 
 ## 1.0 Networking Fundamentals
 
