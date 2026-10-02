@@ -106,6 +106,18 @@ Each note is the long version. Each cheat sheet is the same material in one-line
 | 11.1 | [Web, UC, virtualization, SDN](notes/11.0-virtualization-cloud-iot/11.1-web-uc-virtualization.md) | [11.0 sheet](cheat-sheets/11.0-virtualization-cloud-iot.md) |
 | 11.2 | [SAN, cloud, IoT](notes/11.0-virtualization-cloud-iot/11.2-san-cloud-iot.md) | |
 
+## 12.0 Network+ N10-009
+
+The video course predates the current exam (N10-009). These notes are the objectives that course does not cover on their own. The older sections are still the place for OSI, subnetting, STP, and the port table.
+
+| | Note | Cheat sheet |
+|---|---|---|
+| 12.1 | [Architectures and traffic](notes/12.0-n10-009/12.1-architectures-and-traffic.md) | [12.0 sheet](cheat-sheets/12.0-n10-009.md) |
+| 12.2 | [Modern environments](notes/12.0-n10-009/12.2-modern-environments.md) | |
+| 12.3 | [Cloud networking](notes/12.0-n10-009/12.3-cloud-networking.md) | |
+| 12.4 | [Recovery, DNS security, management](notes/12.0-n10-009/12.4-recovery-dns-and-management.md) | |
+| 12.5 | [Installation, wireless details, hardening](notes/12.0-n10-009/12.5-install-wireless-and-hardening.md) | |
+
 ## How to review
 
-Read the numbered note once. After that, drill the matching cheat sheet. If a line on the sheet is not obvious, go back to that number. TCP is 4.2. Subnetting is 6.1. The video times are in the syllabus.
+Read the numbered note once. After that, drill the matching cheat sheet. If a line on the sheet is not obvious, go back to that number. TCP is 4.2. Subnetting is 6.1. The current exam's newer topics are 12.0. The video times are in the syllabus.

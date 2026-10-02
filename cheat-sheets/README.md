@@ -15,5 +15,6 @@ One page per section, for recall. The long explanations are in `notes/`.
 | [9.0 Operations and troubleshooting](9.0-operations-and-troubleshooting.md) | Method, tools, common faults, change control |
 | [10.0 Security](10.0-security.md) | AAA, IPSec, attacks, wireless security |
 | [11.0 Virtualization, cloud, and IoT](11.0-virtualization-cloud-iot.md) | SDN, SAN, cloud, IoT |
+| [12.0 Network+ N10-009](12.0-n10-009.md) | Spine-leaf, VXLAN, SASE, cloud gateways, RPO/RTO, DNSSEC |
 
-Start a review at the 4.0 sheet if the topic is TCP, the 6.0 sheet if the topic is a subnet, and the 3.0 sheet if the topic is a port number.
+Start a review at the 4.0 sheet if the topic is TCP, the 6.0 sheet if the topic is a subnet, the 3.0 sheet if the topic is a port number, and the 12.0 sheet if the topic is spine-leaf, VXLAN, SASE, or a recovery metric.

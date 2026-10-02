@@ -80,3 +80,5 @@ Common networking attacks, threat mitigation, user education, advanced mitigatio
 | SAN, cloud, IoT | [11.2](11.0-virtualization-cloud-iot/11.2-san-cloud-iot.md) |
 
 Modules before 03:39:10 (theory, topologies, cables, devices) are sections [1.0](1.0-networking-fundamentals/1.1-theory-and-terminology.md) through [1.9](1.0-networking-fundamentals/1.9-advanced-devices.md). The published chapter list that was available starts at data transmissions.
+
+The current exam is **N10-009**. Topics that course does not teach on their own — spine-and-leaf, VXLAN, zero trust, SASE, cloud gateways, and disaster-recovery metrics — are in [12.0](12.0-n10-009/12.1-architectures-and-traffic.md).
