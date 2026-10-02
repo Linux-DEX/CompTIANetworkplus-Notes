@@ -9,5 +9,11 @@ One page per section, for recall. The long explanations are in `notes/`.
 | [3.0 Protocols and services](3.0-protocols-and-services.md) | Ports, mail, SSH, SMB, LDAP, Zeroconf |
 | [4.0 Models, Ethernet, and wireless](4.0-models-ethernet-wireless.md) | OSI, TCP, Ethernet names, 802.11, segmentation |
 | [5.0 IP and core protocols](5.0-ip-and-core-protocols.md) | Binary conversion, private ranges, UDP, ARP, ICMP |
+| [6.0 Addressing](6.0-addressing.md) | Subnetting, IPv6, DHCP, DNS, NAT |
+| [7.0 Switching and routing](7.0-switching-and-routing.md) | STP, PoE, metrics, VLANs, trunks |
+| [8.0 WAN and remote access](8.0-wan-and-remote-access.md) | Leased lines, MPLS, SIP, VPNs |
+| [9.0 Operations and troubleshooting](9.0-operations-and-troubleshooting.md) | Method, tools, common faults, change control |
+| [10.0 Security](10.0-security.md) | AAA, IPSec, attacks, wireless security |
+| [11.0 Virtualization, cloud, and IoT](11.0-virtualization-cloud-iot.md) | SDN, SAN, cloud, IoT |
 
-Start a review at the 4.0 sheet if the topic is TCP, and at the 3.0 sheet if the topic is a port number.
+Start a review at the 4.0 sheet if the topic is TCP, the 6.0 sheet if the topic is a subnet, and the 3.0 sheet if the topic is a port number.

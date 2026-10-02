@@ -1,10 +1,8 @@
 # CompTIA Network+ notes
 
-Study notes from [Paul Browning's Network+ course](https://www.youtube.com/watch?v=xmpYfyNmWbw), rewritten into numbered sections. Each note is the long version. Each cheat sheet is the same material in one-liners for review.
+Study notes from [Paul Browning's Network+ course](https://www.youtube.com/watch?v=xmpYfyNmWbw), rewritten into numbered sections. The [video syllabus](notes/00-video-syllabus.md) maps each module to a note and, where the chapter time is known, jumps to that point in the video.
 
-Diagrams stay in `img/`. Notes link to them with a relative path.
-
-Later course modules (subnetting design, DNS, NAT, switching, routing, WAN, security) are not written up here yet. Section 5 stops at address conversion and the core protocols.
+Each note is the long version. Each cheat sheet is the same material in one-liners for review. Diagrams stay in `img/`.
 
 ## 1.0 Networking Fundamentals
 
@@ -52,6 +50,62 @@ Later course modules (subnetting design, DNS, NAT, switching, routing, WAN, secu
 | 5.1 | [Addresses and conversion](notes/5.0-ip-and-core-protocols/5.1-ip-addresses-and-conversion.md) | [5.0 sheet](cheat-sheets/5.0-ip-and-core-protocols.md) |
 | 5.2 | [IP, UDP, ARP, ICMP, IGMP](notes/5.0-ip-and-core-protocols/5.2-core-ip-protocols.md) | |
 
+## 6.0 Addressing
+
+| | Note | Cheat sheet |
+|---|---|---|
+| 6.1 | [Subnetting](notes/6.0-addressing/6.1-subnetting.md) | [6.0 sheet](cheat-sheets/6.0-addressing.md) |
+| 6.2 | [Schemes and delivery](notes/6.0-addressing/6.2-addressing-schemes.md) | |
+| 6.3 | [IPv6](notes/6.0-addressing/6.3-ipv6.md) | |
+| 6.4 | [Address assignment](notes/6.0-addressing/6.4-address-assignment.md) | |
+| 6.5 | [DNS](notes/6.0-addressing/6.5-dns.md) | |
+| 6.6 | [Proxy and NAT](notes/6.0-addressing/6.6-proxy-and-nat.md) | |
+| 6.7 | [Services and tools](notes/6.0-addressing/6.7-services-and-tools.md) | |
+
+## 7.0 Switching and Routing
+
+| | Note | Cheat sheet |
+|---|---|---|
+| 7.1 | [Switching, STP, PoE](notes/7.0-switching-and-routing/7.1-switching-stp-poe.md) | [7.0 sheet](cheat-sheets/7.0-switching-and-routing.md) |
+| 7.2 | [Routing, metrics, tables](notes/7.0-switching-and-routing/7.2-routing.md) | |
+| 7.3 | [Dynamic routing](notes/7.0-switching-and-routing/7.3-dynamic-routing.md) | |
+| 7.4 | [VLANs and trunks](notes/7.0-switching-and-routing/7.4-vlans-and-trunks.md) | |
+
+## 8.0 WAN and Remote Access
+
+| | Note | Cheat sheet |
+|---|---|---|
+| 8.1 | [WAN technologies](notes/8.0-wan-and-remote-access/8.1-wan-technologies.md) | [8.0 sheet](cheat-sheets/8.0-wan-and-remote-access.md) |
+| 8.2 | [Voice and last-mile links](notes/8.0-wan-and-remote-access/8.2-voice-and-wan-links.md) | |
+| 8.3 | [Remote access and VPNs](notes/8.0-wan-and-remote-access/8.3-remote-access-and-vpns.md) | |
+
+## 9.0 Operations and Troubleshooting
+
+| | Note | Cheat sheet |
+|---|---|---|
+| 9.1 | [Monitoring and documentation](notes/9.0-operations-and-troubleshooting/9.1-monitoring-and-documentation.md) | [9.0 sheet](cheat-sheets/9.0-operations-and-troubleshooting.md) |
+| 9.2 | [Troubleshooting method](notes/9.0-operations-and-troubleshooting/9.2-troubleshooting-methodology.md) | |
+| 9.3 | [Tools, HA, SNMP](notes/9.0-operations-and-troubleshooting/9.3-tools.md) | |
+| 9.4 | [Common issues](notes/9.0-operations-and-troubleshooting/9.4-common-issues.md) | |
+| 9.5 | [Change management](notes/9.0-operations-and-troubleshooting/9.5-change-management.md) | |
+
+## 10.0 Security
+
+| | Note | Cheat sheet |
+|---|---|---|
+| 10.1 | [Fundamentals and access](notes/10.0-security/10.1-fundamentals-and-access.md) | [10.0 sheet](cheat-sheets/10.0-security.md) |
+| 10.2 | [Cryptography and IPSec](notes/10.0-security/10.2-cryptography-and-ipsec.md) | |
+| 10.3 | [Attacks and defense](notes/10.0-security/10.3-attacks-and-defense.md) | |
+| 10.4 | [Mitigation and wireless](notes/10.0-security/10.4-mitigation-and-wireless.md) | |
+| 10.5 | [Physical, forensics, safety](notes/10.0-security/10.5-physical-forensics-safety.md) | |
+
+## 11.0 Virtualization, Cloud, and IoT
+
+| | Note | Cheat sheet |
+|---|---|---|
+| 11.1 | [Web, UC, virtualization, SDN](notes/11.0-virtualization-cloud-iot/11.1-web-uc-virtualization.md) | [11.0 sheet](cheat-sheets/11.0-virtualization-cloud-iot.md) |
+| 11.2 | [SAN, cloud, IoT](notes/11.0-virtualization-cloud-iot/11.2-san-cloud-iot.md) | |
+
 ## How to review
 
-Read the numbered note once. After that, drill the matching cheat sheet. If a line on the sheet is not obvious, go back to that number. TCP is 4.2; the sheet version is the "4.2 TCP" block in the 4.0 cheat sheet.
+Read the numbered note once. After that, drill the matching cheat sheet. If a line on the sheet is not obvious, go back to that number. TCP is 4.2. Subnetting is 6.1. The video times are in the syllabus.
